@@ -163,8 +163,8 @@ body .body2 {
   position: relative;
   left: 12%;
   margin-top: 5%;
-  width: 60px;
-  height: 60px;
+  width: 3.1%;
+  height: 3.1%;
   background: #fff;
   border-radius: 60px;
   transition: 0.5s; /* 애니메이션 속도 조절 */
@@ -173,7 +173,7 @@ body .body2 {
 }
 
 .search.active {
-  width: 860px;
+  width: 50%;
 }
 
 .search .icon {
@@ -267,9 +267,9 @@ body .body2 {
 }
 
 .keyword.active {
-  position: absolute;
+  position: relative;
   display: flex;
-  left: 13%;
+  left: -37%;
   margin-top: 9%;
 }
 
