@@ -155,13 +155,13 @@ body .body2 {
   display: flex;
   /* justify-content: center;
   align-items: center; */
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background: #393875;
 }
 
 .search {
   position: relative;
-  left: 10%;
+  left: 12%;
   margin-top: 5%;
   width: 60px;
   height: 60px;
@@ -269,8 +269,8 @@ body .body2 {
 .keyword.active {
   position: absolute;
   display: flex;
-  left: 10%;
-  margin-top: 9%;
+  left: 13%;
+  margin-top: 17.5vh;
 }
 
 .keyword li {
@@ -291,4 +291,64 @@ body .body2 {
   /* 하이퍼링크 css */
   text-decoration: none;
   color: rgb(255, 255, 255);
+}
+
+.body3 {
+  background: #393875;
+}
+
+.body3 h2 {
+  position: absolute;
+  font-size: 2.5em;
+  color: #fff;
+  margin-top: 11vh;
+  left: 12%;
+}
+
+.contest {
+  margin-left: 12%;
+  padding-bottom: 100px;
+  width: 250px;
+  display: flex;
+  background: #393875;
+}
+
+.contest .contest_img {
+  position: relative;
+  margin-top: 22vh;
+  margin-right: 37px;
+
+  width: 260px;
+  height: 260px;
+  background: #fff;
+}
+
+.contest .contest-box .contest-title {
+  padding-right: 10%;
+  text-align: center;
+  color: #fff;
+  margin-top: 1vh;
+  margin-left: 2px;
+}
+
+.contest .contest-box .contest-sub {
+  position: absolute;
+  top: 1685px;
+  padding-right: 10%;
+  color: rgba(255, 255, 255, 0.705);
+  margin-top: 1vh;
+  margin-left: 2px;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.contest .contest-box .contest-sub-rct {
+  position: absolute;
+  top: 2345px;
+  padding-right: 10%;
+  color: rgba(255, 255, 255, 0.705);
+  margin-top: 1vh;
+  margin-left: 2px;
+  font-size: 12px;
+  font-weight: 100;
 }
