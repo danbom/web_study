@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth; /* 버튼누르면 바로 이동하는게 아니라 스무스하게 피피티 슬라이드처럼 넘어가는거 */
+}
+
+body {
+  min-height: 100vh; /* vh는 vertical height으로 뷰포트의 1/100 따라서 100vh는 뷰포트 전체 높이 */
+  overflow-x: hidden; /* 오른쪽으로 스크롤 넘치는거 숨기는 기능인듯 */
+  background: linear-gradient(#2b1044, #7597de);
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between; /* 로고와 리스트 중간에 space 삽입 */
+  align-items: center; /* 높이 가운데로 정렬 */
+  z-index: 10000; /* 높으면 위로 올라오나봄 */
+}
+
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none; /* 장식선(윗줄, 밑줄) 설정 */
+  font-size: 2em;
+  text-transform: uppercase; /* 모든 글자를 대문자로 변경 */
+  letter-spacing: 0.8px; /* 글자 간격 */
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  list-style: none; /* 못생긴 리스트의 점들 없애줌 */
+  margin-left: 20px; /* 리스트의 각 요소들 왼쪽 간격 20px씩 둔다 */
+}
+
+header ul li a {
+  /* 하이퍼링크 css */
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  /* 사용자의 커서가 요소에 올라가 있을 때 적용 */
+  /* 첫화면은 home이 active한 상태, 나머지는 내가 알아서.. */
+  background: #fff;
+  color: #2b1044;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px; /* 전체 화면 크기의 너비, 높이에 100px씩 패딩하는 것이므로 스크롤바가 생긴다 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section::before {
+  /* 요소 앞을 장식할 때 사용 */
+  content: " "; /* 얘가 박스 역할을 하넹 */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  /* background: linear-gradient(to top, #1c0522, transparent); */
+  background: linear-gradient(to top, #3c3368, transparent);
+  z-index: 1000;
+}
+
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이 width 100%, height 100% 크기의 오브젝트에 img를 덮어씌운다는 뜻 */
+  pointer-events: none;
+}
+
+section img#moon {
+  mix-blend-mode: screen;
+  /* mix-blend-mode: 요소의 컨텐츠가 자신의 배경 및 부모와 어떻게 혼합되어야 하는지 지정; */
+}
+
+section img#mountains_front {
+  z-index: 10;
+}
+
+#text {
+  position: absolute;
+  right: 100px;
+  color: #fff;
+  white-space: nowrap;
+  /* white-space는 공백 문자 처리하는 법 지정, nowrap: 줄바꿈없이 쭉 */
+  font-size: 8.5vw;
+  letter-spacing: -5px;
+  z-index: 9;
+}
+
+#btn {
+  text-decoration: none;
+  display: inline-block;
+  /* inline : 요소들이 줄바꿈없이 나란히 배치
+    block : 혼자 한 줄 차지, 매번 줄바꿈한다는 뜻
+    inline-block : 기본적으로 inline이지만 width, height, margin, padding 등 속성 지정 가능 */
+  padding: 8px 30px;
+  border-radius: 45px;
+  background: #fff;
+  color: #2b1044;
+  font-size: 1.5em;
+  z-index: 9;
+  transform: translateY(150px);
+}
+
+.sec {
+  position: relative;
+  padding: 100px;
+  /* background: #1c0522; */
+  background: #3c3368;
+  z-index: 10;
+}
+
+.sec h2 {
+  font-size: 3.5em;
+  color: #fff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.sec p {
+  font-size: 1em;
+  color: #fff;
+}
