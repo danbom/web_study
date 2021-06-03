@@ -80,7 +80,7 @@ section::before {
   width: 100%;
   height: 200px;
   /* background: linear-gradient(to top, #1c0522, transparent); */
-  background: linear-gradient(to top, #393875, transparent);
+  background: linear-gradient(to top, #2e2c58, transparent);
   z-index: 1000;
 }
 
@@ -133,7 +133,7 @@ section img#mountains_front {
   position: relative;
   padding: 100px;
   /* background: #1c0522; */
-  background: #393875;
+  background: #2e2c58;
   z-index: 10;
 }
 
@@ -156,7 +156,7 @@ body .body2 {
   /* justify-content: center;
   align-items: center; */
   /* min-height: 100vh; */
-  background: #393875;
+  background: #2e2c58;
 }
 
 .search {
@@ -196,7 +196,7 @@ body .body2 {
   position: absolute;
   width: 15px;
   height: 15px;
-  border: 3px solid #393875;
+  border: 3px solid #2e2c58;
   border-radius: 50%;
   transform: translate(-4px, -4px);
 }
@@ -206,7 +206,7 @@ body .body2 {
   position: absolute;
   width: 3px;
   height: 12px;
-  background: #393875;
+  background: #2e2c58;
   transform: translate(6px, 6px) rotate(315deg);
 }
 
@@ -294,14 +294,14 @@ body .body2 {
 }
 
 .body3 {
-  background: #393875;
+  background: #2e2c58;
 }
 
 .body3 h2 {
   position: absolute;
-  font-size: 2.5em;
+  font-size: 2.2em;
   color: #fff;
-  margin-top: 9vh;
+  margin-top: 12vh;
   left: 12%;
 }
 
@@ -310,7 +310,7 @@ body .body2 {
   padding-bottom: 5%;
   width: 20%;
   display: flex;
-  background: #393875;
+  background: #2e2c58;
 }
 
 .body3 .contest .contest_img {
@@ -344,7 +344,7 @@ body .body2 {
 }
 
 /* .contest .contest-box .contest-sub-rct {
-  /* position: absolute;
+  position: absolute;
   top: 172%; 
   padding-right: 10%;
   color: rgba(255, 255, 255, 0.705);
@@ -354,7 +354,164 @@ body .body2 {
   font-weight: 100;
 } */
 
+.body3 .contest .contest-box .interest-zone {
+  padding-right: 10%;
+  color: rgba(255, 255, 255, 0.705);
+  margin-top: 3%;
+  margin-left: 0.1%;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.body3 .contest .contest-box .heart i {
+  color: rgba(248, 51, 51, 0.705);
+  margin-right: 3%;
+}
+
+.body3 .contest .contest-box .eye i {
+  color: rgb(255, 255, 255);
+  margin-left: 8%;
+  margin-right: 4%;
+}
+
 .body4 {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* 오른쪽 정렬 */
+  align-items: center;
+  min-height: 60vh;
+  flex-direction: column;
+  background: #2e2c58;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 3% 5%;
+  background: #18172b;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* 요소의 총 너비가 부모의 너비보다 클 때 다음 줄에 이어 나열 */
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+footer .container .sect {
+  margin-right: 3%;
+}
+
+footer .container .sect.aboutus {
+  width: 30%;
+}
+
+footer .container h2 {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 4%;
+}
+
+footer .container .sect.aboutus p {
+  font-size: 15px;
+  color: #999;
+}
+
+.sci {
+  margin-top: 3%;
+  display: flex;
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li a {
+  display: inline-block;
+  width: 1.5vw;
+  height: 3vh;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5vw;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.sci li a:hover {
+  background: #cececed0;
+}
+
+.sci li a .fa {
+  color: #fff;
+  font-size: 15px;
+}
+
+.quickLinks {
+  position: relative;
+  width: 15%;
+  font-size: 15px;
+}
+
+.quickLinks ul {
+  margin-top: 8%;
+}
+
+.quickLinks ul li {
+  margin-top: 3%;
+  list-style: none;
+}
+
+.quickLinks ul li a {
+  color: rgb(172, 172, 172);
+  text-decoration: none;
+  margin-bottom: 1.5%;
+  display: inline-block;
+}
+
+.quickLinks ul li a:hover {
+  color: #fff;
+}
+
+.contact {
+  width: calc(35% - 6%);
+  margin-right: 0 !important;
+}
+
+.contact .info {
+  position: relative;
+  font-size: 15px;
+}
+
+.contact .info li {
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.contact .info li span:nth-child(1) {
+  color: #fff;
+  font-size: 18px;
+  margin-right: 4%;
+}
+
+.contact .info li span {
+  color: #999;
+}
+
+.contact .info li span a {
+  color: #999;
+}
+
+.contact .info li p a {
+  text-decoration: none;
+  color: #999;
+}
+
+.contact .info li p a:hover {
+  color: #fff;
 }
