@@ -270,7 +270,7 @@ body .body2 {
   position: absolute;
   display: flex;
   left: 13%;
-  margin-top: 17.5vh;
+  margin-top: 9%;
 }
 
 .keyword li {
@@ -307,8 +307,8 @@ body .body2 {
 
 .contest {
   margin-left: 12%;
-  padding-bottom: 100px;
-  width: 250px;
+  padding-bottom: 5%;
+  width: 20%;
   display: flex;
   background: #393875;
 }
@@ -316,39 +316,39 @@ body .body2 {
 .contest .contest_img {
   position: relative;
   margin-top: 22vh;
-  margin-right: 37px;
+  margin-right: 2vw;
 
-  width: 260px;
-  height: 260px;
+  width: 13.5vw;
+  height: 25vh;
   background: #fff;
 }
 
 .contest .contest-box .contest-title {
   padding-right: 10%;
-  text-align: center;
+  /* text-align: center; */
   color: #fff;
   margin-top: 1vh;
-  margin-left: 2px;
+  margin-left: 1%;
 }
 
 .contest .contest-box .contest-sub {
   position: absolute;
-  top: 1685px;
+  top: 172%;
   padding-right: 10%;
   color: rgba(255, 255, 255, 0.705);
-  margin-top: 1vh;
-  margin-left: 2px;
+  margin-top: 1%;
+  margin-left: 0.1%;
   font-size: 12px;
   font-weight: 100;
 }
 
 .contest .contest-box .contest-sub-rct {
   position: absolute;
-  top: 2345px;
+  top: 238.5%;
   padding-right: 10%;
   color: rgba(255, 255, 255, 0.705);
-  margin-top: 1vh;
-  margin-left: 2px;
+  margin-top: 1%;
+  margin-left: 0.1%;
   font-size: 12px;
   font-weight: 100;
 }
