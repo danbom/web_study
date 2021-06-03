@@ -163,8 +163,8 @@ body .body2 {
   position: relative;
   left: 12%;
   margin-top: 5%;
-  width: 3.1%;
-  height: 3.1%;
+  width: 3.7vw;
+  height: 7.3vh;
   background: #fff;
   border-radius: 60px;
   transition: 0.5s; /* 애니메이션 속도 조절 */
@@ -180,8 +180,8 @@ body .body2 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 60px;
-  height: 60px;
+  width: 3.9vw;
+  height: 7.8vh;
   background: #fff;
   border-radius: 60px;
   display: flex;
@@ -212,9 +212,9 @@ body .body2 {
 
 .search .input {
   position: relative;
-  width: 300px;
-  height: 60px;
-  left: 60px;
+  width: 40%;
+  height: 100%;
+  left: 8%;
   display: flex;
   justify-content: center;
   align-items: center;
