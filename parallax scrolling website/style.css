@@ -78,9 +78,9 @@ section::before {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 300px;
   /* background: linear-gradient(to top, #1c0522, transparent); */
-  background: linear-gradient(to top, #3c3368, transparent);
+  background: linear-gradient(to top, #393875, transparent);
   z-index: 1000;
 }
 
@@ -133,7 +133,7 @@ section img#mountains_front {
   position: relative;
   padding: 100px;
   /* background: #1c0522; */
-  background: #3c3368;
+  background: #393875;
   z-index: 10;
 }
 

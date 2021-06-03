@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parallax Scrolling Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="#" class="logo">GONGDAL</a>
+      <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="contest.html">CONTEST</a></li>
+        <li><a href="schedule.html" class="active">SCHEDULE</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="stars.png" id="stars" />
+      <img src="moon.png" id="moon" />
+      <img src="mountains_behind.png" id="mountains_behind" />
+      <h2 id="text">with GONDAL</h2>
+      <a href="#sec" id="btn">EXPLORE</a>
+      <img src="mountains_front.png" id="mountains_front" />
+    </section>
+    <div class="sec" id="sec">
+      <h2>Manage your TIME, Win the CONTEST</h2>
+      <p>
+        Hello. We are team no.11. Christina, one of the today’s job seekers,
+        prepares various contests to get a job. But for each content, she has
+        difficulty managing due date because of different schedules and
+        preparations. So, she is finding some a website that manages the
+        schedule and organize portfolio. Finally, she found GONGDAL that manages
+        the time of the contest and her portfolio after the contests! Our team,
+        디자인은 누가하죠, is going to develop the GONGDAL that integrates of
+        contests information, gives reviews of the specific contest to win,
+        manages the documents and organizes schedule of the contest to fit
+        Christina’s or other’s need. After managing time, users can win the
+        contest!<br /><br />Here are the sketches we made by brainstorming. We
+        picked those two because it is easy to manage time schedule with contest
+        information. It is convenient to use and see the schedule visually
+        because it is based on the calendar design. Users can share the time
+        management schedule with teammates for scheduling. For the personal
+        page, there are a clander shared by teammates. It shows the duration
+        date of the contests. If you click the month, you can see the schedule
+        of contest that you want to join. In this page, you can manage your
+        schedule by week and the contests. Next, if you click see priority
+        button, you can see the comparing board. In the comparing board page,
+        people can set and see the expected time and get the priority.<br /><br />Next,
+        if user clicks contest, users can see the contests information including
+        Popular contests, recent contests and some information including
+        preferences and view times. User can search the contests too. And if
+        user click schedule page, user can manage their contests including
+        number of contests, need time, priority and the schedule calendar
+        related with the contests. If you go to the contest pages and click one
+        of the contests, then people can see more detail by clicking the banner
+        box. On this page, people can the contest at a glance. <br /><br />By
+        the way, these two designs have pros and cons for each one. Firstly, the
+        main page is good for watch contest list, shows start date and deadline
+        of the contest on the calendar, and classifies contests by popularity or
+        type. However, it is difficult to manage time schedule and cannot put
+        another personal schedule. Secondly for calendar, users can easily
+        manage schedule with expectation time and priority and share and edit
+        the contest date and schedule with teammates. It is hard to see the
+        contest information by type, though. In other words, it cannot classify
+        by the type or popularity. <br /><br />firstly, for the simple task,
+        user checks the schedule of the contest. On the main page, user can
+        check the contest information including start and end date. Then if user
+        click ‘schedule’, then she can see monthly and weekly schedule of the
+        contest. Then, if user clicks specific month, then she can check weekly
+        schedule calendar. If user click “contest” on the banner box, then they
+        can check the priority in comparing board. Next, Participating in the
+        contest is moderate task. On the main page, user can search for contest.
+        User can check the contest info and chooses one that she wants to join.
+        Then, user can put schedule of the contest on personal page. And then
+        users can check all the contest lists that that she joins. Click the
+        contest button on the banner and see the priority of contest. And then
+        after participating in they contest and can manage the portfolio.
+        Lastly, for the complex text, user can manage time and portfolio after
+        participation. Click the “Schedule” button on the banner bar to manage
+        time, schedule. On this page, user can edit contest list and each
+        schedule. On the schedule table, there are the timeline and shows tasks
+        with the text box. Click specific month to check weekly schedule with
+        calendar. User can check number of contests and needed time. And click
+        either of icons to see the sorted schedule. click “contest” button to
+        see contest list and sorted by priority. Finally, user can manage
+        portfolio and share information after the contest.<br /><br />
+      </p>
+    </div>
+    <script>
+      let stars = document.getElementById("stars");
+      let moon = document.getElementById("moon");
+      let mountains_behind = document.getElementById("mountains_behind");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+      let mountains_front = document.getElementById("mountains_front");
+      let header = document.querySelector("header");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        stars.style.left = value * 0.35 + "px";
+        moon.style.top = value * 0.95 + "px";
+        mountains_behind.style.top = value * 0.5 + "px";
+        mountains_front.style.top = value * 0 + "px";
+        text.style.marginRight = value * 2 + "px";
+        text.style.marginTop = value * 1 + "px";
+        btn.style.marginTop = value * 1 + "px";
+        header.style.top = value * 0.5 + "px";
+      });
+    </script>
+  </body>
+</html>
