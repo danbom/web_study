@@ -78,7 +78,7 @@ section::before {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 300px;
+  height: 200px;
   /* background: linear-gradient(to top, #1c0522, transparent); */
   background: linear-gradient(to top, #393875, transparent);
   z-index: 1000;
@@ -327,28 +327,28 @@ body .body2 {
   padding-right: 10%;
   /* text-align: center; */
   color: #fff;
-  margin-top: 1vh;
+  margin-top: 1%;
   margin-left: 1%;
 }
 
 .contest .contest-box .contest-sub {
-  position: absolute;
-  top: 172%;
+  /* position: absolute;
+  top: 172%; */
   padding-right: 10%;
   color: rgba(255, 255, 255, 0.705);
-  margin-top: 1%;
+  margin-top: 5%;
   margin-left: 0.1%;
   font-size: 12px;
   font-weight: 100;
 }
 
-.contest .contest-box .contest-sub-rct {
-  position: absolute;
-  top: 238.5%;
+/* .contest .contest-box .contest-sub-rct {
+  /* position: absolute;
+  top: 172%; */
   padding-right: 10%;
   color: rgba(255, 255, 255, 0.705);
-  margin-top: 1%;
+  margin-top: 5%;
   margin-left: 0.1%;
   font-size: 12px;
   font-weight: 100;
-}
+} */
