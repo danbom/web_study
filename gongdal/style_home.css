@@ -301,11 +301,11 @@ body .body2 {
   position: absolute;
   font-size: 2.5em;
   color: #fff;
-  margin-top: 11vh;
+  margin-top: 9vh;
   left: 12%;
 }
 
-.contest {
+.body3 .contest {
   margin-left: 12%;
   padding-bottom: 5%;
   width: 20%;
@@ -313,25 +313,26 @@ body .body2 {
   background: #393875;
 }
 
-.contest .contest_img {
+.body3 .contest .contest_img {
   position: relative;
-  margin-top: 22vh;
+  margin-top: 21vh;
   margin-right: 2vw;
-
+  border-radius: 10px;
   width: 13.5vw;
   height: 25vh;
-  background: #fff;
+  /* background: #fff; */
 }
 
-.contest .contest-box .contest-title {
+.body3 .contest .contest-box .contest-title {
   padding-right: 10%;
   /* text-align: center; */
   color: #fff;
-  margin-top: 1%;
+  margin-top: 3%;
   margin-left: 1%;
+  font-size: 90%;
 }
 
-.contest .contest-box .contest-sub {
+.body3 .contest .contest-box .contest-sub {
   /* position: absolute;
   top: 172%; */
   padding-right: 10%;
@@ -344,7 +345,7 @@ body .body2 {
 
 /* .contest .contest-box .contest-sub-rct {
   /* position: absolute;
-  top: 172%; */
+  top: 172%; 
   padding-right: 10%;
   color: rgba(255, 255, 255, 0.705);
   margin-top: 5%;
@@ -352,3 +353,8 @@ body .body2 {
   font-size: 12px;
   font-weight: 100;
 } */
+
+.body4 {
+  display: flex;
+  justify-content: flex-end;
+}
