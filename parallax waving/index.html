@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <haed>
+    <meta charset="UTF-8" />
+    <title>Wavy Banner Parallax Effects</title>
+    <link rel="stylesheet" href="style.css" />
+  </haed>
+  <body>
+    <section>
+      <div class="wave" id="wave1" style="--i: 1"></div>
+      <div class="wave" id="wave2" style="--i: 2"></div>
+      <div class="wave" id="wave3" style="--i: 3"></div>
+      <div class="wave" id="wave4" style="--i: 4"></div>
+    </section>
+    <div class="sec">
+      <h2>Animated Parallax Water Wave Effects</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa tenetur
+        deleniti, perferendis in impedit numquam ipsum, est, laudantium dolorem
+        repellendus quisquam veniam? Consectetur modi minus laboriosam fuga
+        impedit possimus error.<br /><br />Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit. Culpa tenetur deleniti, perferendis in
+        impedit numquam ipsum, est, laudantium dolorem repellendus quisquam
+        veniam? Consectetur modi minus laboriosam fuga impedit possimus
+        error.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+        tenetur deleniti, perferendis in impedit numquam ipsum, est, laudantium
+        dolorem repellendus quisquam veniam? Consectetur modi minus laboriosam
+        fuga impedit possimus error.<br /><br />
+      </p>
+    </div>
+
+    <script>
+      let wave1 = document.getElementById("wave1");
+      let wave2 = document.getElementById("wave2");
+      let wave3 = document.getElementById("wave3");
+      let wave4 = document.getElementById("wave4");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+
+        wave1.style.backgroundPositionX = 400 + value * 1.5 + "px";
+        wave2.style.backgroundPositionX = 300 + value * -1.5 + "px";
+        wave3.style.backgroundPositionX = 200 + value * 0.5 + "px";
+        wave4.style.backgroundPositionX = 100 + value * -0.5 + "px";
+      });
+    </script>
+  </body>
+</html>
