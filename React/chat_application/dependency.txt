@@ -1,3 +1,0 @@
-chat_application dependencies
-- npx create-react-app chat_application
-- npm install @ant-design/icons axios react-chat-engine --save --legacy-peer-deps
