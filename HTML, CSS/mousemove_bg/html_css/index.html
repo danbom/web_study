@@ -10,15 +10,38 @@
       <div class="container">
         <div id="scene">
           <h2 id="text">
-            <span>N</span>
-            <span>y</span>
-            <span>o</span>
-            <span>u</span>
-            <span>n</span>
-            <span>g</span>
+            <span data-depth-y="2">N</span>
+            <span data-depth-y="-8">y</span>
+            <span data-depth-y="4">o</span>
+            <span data-depth-y="-5">u</span>
+            <span data-depth-y="3">n</span>
+            <span data-depth-y="-6">g</span>
           </h2>
+          <div class="layer" data-depth="-0.5">
+            <img src="../icon/coding.png" />
+          </div>
+          <div class="layer" data-depth="0.75">
+            <img src="../icon/CSS.png" />
+          </div>
+          <div class="layer" data-depth="1"><img src="../icon/game.png" /></div>
+          <div class="layer" data-depth="-0.25">
+            <img src="../icon/HTML.png" />
+          </div>
+          <div class="layer" data-depth="0.625">
+            <img src="../icon/react.png" />
+          </div>
+          <div class="layer" data-depth="-0.375">
+            <img src="../icon/Python.png" />
+          </div>
         </div>
       </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script>
+      var text = document.getElementById("text");
+      var scene = document.getElementById("scene");
+      var parallaxInstance = new Parallax(text);
+      var parallaxInstance = new Parallax(scene);
+    </script>
   </body>
 </html>
