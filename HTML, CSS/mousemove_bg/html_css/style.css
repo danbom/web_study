@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(#f0ccdb, #f79dc3);
+}
+
+.container #scene {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
