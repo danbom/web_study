@@ -21,7 +21,7 @@
   position: absolute;
   width: 100%;
   height: 100vh;
-  background: radial-gradient(#f0ccdb, #f79dc3);
+  background: linear-gradient(#ffafbd, #ffc3a0);
 }
 
 .container #scene {
@@ -43,9 +43,9 @@
 .container #scene #text span {
   position: relative !important;
   display: inline-block;
-  text-shadow: 1px 1px 0 #c7b2bb81, 2px 2px 0 #c7b2bb81, 3px 3px 0 #c7b2bb81,
-    4px 4px 0 #c7b2bb81, 5px 5px 0 #c7b2bb81, 6px 6px 0 #c7b2bb81,
-    7px 7px 0 #c7b2bb81, 8px 8px 0 #c7b2bb81, 25px 35px 0 rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 0 #c9a28c27, 2px 2px 0 #c9a28c27, 3px 3px 0 #c9a28c27,
+    4px 4px 0 #c9a28c27, 5px 5px 0 #c9a28c27, 6px 6px 0 #c9a28c27,
+    7px 7px 0 #c9a28c27, 8px 8px 0 #c9a28c27, 25px 35px 0 rgba(0, 0, 0, 0.1);
 }
 
 .layer {
