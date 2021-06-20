@@ -10,6 +10,7 @@ class Game {
         this.cvs = document.getElementById("cvs");
         this.cvs.setAttribute("width", width);
         this.cvs.setAttribute("height", height);
+        this.ctx = this.cvs.getContext("2d");
 
         this.times = [];
     }
@@ -31,13 +32,16 @@ class Game {
         if (now - this.times[0] > 1000) {
             this.times.shift();
         }
-        console.log(this.times.length);
+        // console.log(this.times.length);
+
+        this.update();
+        this.render();
 
         requestAnimationFrame(this.run.bind(this));
     }
 
     update(){
-        
+
     }
 
     render(){
