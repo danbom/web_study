@@ -58,6 +58,23 @@ class Vector2{
     }
 }
 
+class Ball{
+    constructor(pos, r){
+        this.pos = pos;
+        this.r = r;
+    }
+
+    update(){
+
+    }
+
+    render(ctx){
+        ctx.beginPath();
+        ctx.arc(this.pos.x, this.pos.y, this.r, 0, 2 * Math.PI);
+        ctx.stroke();
+    }
+}
+
 class Game {
     constructor(width, height){
         this.width = width;
@@ -77,7 +94,7 @@ class Game {
     }
 
     init(){
-
+        
     }
 
     run(){
