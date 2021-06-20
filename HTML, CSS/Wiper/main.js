@@ -1,6 +1,32 @@
 // alert("test")
 
+
+
 'use strict'
+
+class Vector2{
+
+    constructor(x, y){
+        this.x = x;
+        this.y = y;
+    }
+
+    addS(s){
+        return new Vector2(this.x + s, this.y + s);
+    }
+
+    subS(s){
+        return new Vector2(this.x - s, this.y - s);
+    }
+
+    mulS(s){
+        return new Vector2(this.x * s, this.y * s);
+    }
+
+    divS(s){
+        return new Vector2(this.x / s, this.y / s);
+    }
+}
 
 class Game {
     constructor(width, height){
@@ -45,10 +71,14 @@ class Game {
     }
 
     render(){
+        this.ctx.clearRect(0, 0, this.width, this.height);
 
+        this.ctx.fillStyle = "white"
+        this.ctx.font = '22px Quicksand';
+        this.ctx.fillText(this.times.length - 1 + "fps", 15, 35);
     }
 }
 
 window.onload = () => {
-    new Game(800,600).start();
+    new Game(1600,900).start();
 }
