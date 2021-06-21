@@ -97,11 +97,14 @@ class Game {
 
         this.balls = [];
 
-        for(let i = 0; i < 100; i++){
+        for (let i = 0; i < 100; i++)
+        {
             let b = new Ball(new Vector2((Math.random() - 0.5) * this.width + this.width / 2.0, (Math.random() - 0.5) * this.height + this.height / 2.0), Math.random() * 10 + 15);
+
+            this.balls.push(b);
         }
 
-        this.balls.push(b);
+        
         
     }
 
