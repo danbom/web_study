@@ -62,6 +62,12 @@ class Ball{
     constructor(pos, r){
         this.pos = pos;
         this.r = r;
+        this.mass = r;
+        this.v = new Vector2(0,0);
+    }
+
+    addForce(f){
+        this.v = this.v.addS(f.divS(this.mass))
     }
 
     update(){
