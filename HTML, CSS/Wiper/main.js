@@ -100,6 +100,8 @@ class Game {
         for(let i = 0; i < 100; i++){
             let b = new Ball(new Vector2((Math.random() - 0.5) * this.width + this.width / 2.0, (Math.random() - 0.5) * this.height + this.height / 2.0), Math.random() * 10 + 15);
         }
+
+        this.balls.push(b);
         
     }
 
@@ -120,7 +122,9 @@ class Game {
     }
 
     update(){
-
+        this.balls.forEach(b => {
+            b.update();
+        });
     }
 
     render(){
@@ -129,6 +133,10 @@ class Game {
         this.ctx.fillStyle = "white"
         this.ctx.font = '22px Quicksand';
         this.ctx.fillText(this.times.length - 1 + "fps", 15, 35);
+
+        this.balls.forEach(b => {
+            b.render(this.ctx);
+        });
     }
 }
 
