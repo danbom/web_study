@@ -71,7 +71,7 @@ class Ball{
     }
 
     update(){
-
+        this.pos = this.pos.addV(this.v);
     }
 
     render(ctx){
@@ -109,6 +109,7 @@ class Game {
         {
             let b = new Ball(new Vector2((Math.random() - 0.5) * this.width * spread + this.width / 2.0, (Math.random() - 0.5) * this.height * spread + this.height / 2.0), Math.random() * 10 + 15);
 
+            b.addForce(new Vector2((Math.random() - 0.5), (Math.random() - 0.5)).mulV(new Vector2(100, 100)));
             this.balls.push(b);
         }
 
