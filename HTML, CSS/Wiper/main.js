@@ -99,26 +99,26 @@ class Game {
 
   init() {
     this.friction = 0.995;
-
+    this.gravity = 1.0;
     this.balls = [];
     const spread = 0.8;
 
-    // for (let i = 0; i < 100; i++) {
-    //   let b = new Ball(
-    //     new Vector2(
-    //       (Math.random() - 0.5) * this.width * spread + this.width / 2.0,
-    //       (Math.random() - 0.5) * this.height * spread + this.height / 2.0
-    //     ),
-    //     Math.random() * 10 + 15
-    //   );
+    for (let i = 0; i < 100; i++) {
+      let b = new Ball(
+        new Vector2(
+          (Math.random() - 0.5) * this.width * spread + this.width / 2.0,
+          (Math.random() - 0.5) * this.height * spread + this.height / 2.0
+        ),
+        Math.random() * 10 + 15
+      );
 
-    //   b.addForce(
-    //     new Vector2(Math.random() - 0.5, Math.random() - 0.5).mulV(
-    //       new Vector2(100, 100)
-    //     )
-    //   );
-    //   this.balls.push(b);
-    // }
+      b.addForce(
+        new Vector2(Math.random() - 0.5, Math.random() - 0.5).mulV(
+          new Vector2(100, 100)
+        )
+      );
+      this.balls.push(b);
+    }
 
     let b = new Ball(new Vector2(100, 100), 10);
     b.addForce(new Vector2(10, 0));
@@ -194,27 +194,25 @@ class Game {
     });
 
     this.balls.forEach(b => {
+      b.addForce(new Vector2(0, this.gravity));
+    });
+
+    this.balls.forEach(b => {
       if (b.pos.x - b.r < 0) {
         b.pos.x = b.r;
         b.v.x = b.v.x * -1;
       }
-    });
 
-    this.balls.forEach(b => {
       if (b.pos.y - b.r < 0) {
         b.pos.y = b.r;
         b.v.y = b.v.y * -1;
       }
-    });
 
-    this.balls.forEach(b => {
       if (b.pos.x + b.r >= this.width) {
         b.pos.x = this.width - b.r;
         b.v.x = b.v.x * -1;
       }
-    });
 
-    this.balls.forEach(b => {
       if (b.pos.y + b.r >= this.height) {
         b.pos.y = this.height - b.r;
         b.v.y = b.v.y * -1;
