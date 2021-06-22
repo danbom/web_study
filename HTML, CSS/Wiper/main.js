@@ -103,22 +103,32 @@ class Game {
     this.balls = [];
     const spread = 0.8;
 
-    for (let i = 0; i < 100; i++) {
-      let b = new Ball(
-        new Vector2(
-          (Math.random() - 0.5) * this.width * spread + this.width / 2.0,
-          (Math.random() - 0.5) * this.height * spread + this.height / 2.0
-        ),
-        Math.random() * 10 + 15
-      );
+    // for (let i = 0; i < 100; i++) {
+    //   let b = new Ball(
+    //     new Vector2(
+    //       (Math.random() - 0.5) * this.width * spread + this.width / 2.0,
+    //       (Math.random() - 0.5) * this.height * spread + this.height / 2.0
+    //     ),
+    //     Math.random() * 10 + 15
+    //   );
 
-      b.addForce(
-        new Vector2(Math.random() - 0.5, Math.random() - 0.5).mulV(
-          new Vector2(100, 100)
-        )
-      );
-      this.balls.push(b);
-    }
+    //   b.addForce(
+    //     new Vector2(Math.random() - 0.5, Math.random() - 0.5).mulV(
+    //       new Vector2(100, 100)
+    //     )
+    //   );
+    //   this.balls.push(b);
+    // }
+
+    let b = new Ball(new Vector2(100, 100), 10);
+    b.addForce(new Vector2(10, 0));
+
+    this.balls.push(b);
+
+    b = new Ball(new Vector2(200, 100), 10);
+    b.addForce(new Vector2(-10, 0));
+
+    this.balls.push(b);
   }
 
   run() {
@@ -140,6 +150,30 @@ class Game {
   update() {
     this.balls.forEach(b => {
       b.update(this.friction);
+    });
+
+    let colliders = [];
+
+    this.balls.forEach(b => {
+      this.balls.forEach(t => {
+        if (b === t) return;
+
+        let dir = t.pos.subV(b.pos);
+        const dist = dir.len();
+
+        if (dist < b.r + t.r) {
+          colliders.push([b, t]);
+          dir = dir.normalized();
+          const gap = b.r + t.r - dist;
+          t.pos = t.pos.addV(dir.mulS(gap / 2.0));
+          //   b.pos = b.pos.addV(dir.mulS(gap / 2.0));
+        }
+      });
+    });
+
+    colliders.forEach(pair => {
+      const b = pair[0];
+      const t = pair[1];
     });
 
     this.balls.forEach(b => {
