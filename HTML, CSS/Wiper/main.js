@@ -174,6 +174,23 @@ class Game {
     colliders.forEach(pair => {
       const b = pair[0];
       const t = pair[1];
+
+      const dir = t.pos.subV(b.pos).normalized();
+      const nor = new Vector2(-dir.y, dir.x);
+
+      const u1 = dir.dot(b.v);
+      const u2 = dir.dot(t.v);
+
+      const vn1 = nor.dot(b.v);
+      const vn2 = nor.dot(t.v);
+
+      const vd1 =
+        ((b.mass - t.mass) * u1 + 2 * t.mass * u2) / (b.mass + t.mass);
+      const vd2 =
+        ((t.mass - b.mass) * u2 + 2 * b.mass * u1) / (b.mass + t.mass);
+
+      b.v = dir.mulS(vd1).addV(nor.mulS(vn1));
+      t.v = dir.mulS(vd2).addV(nor.mulS(vn2));
     });
 
     this.balls.forEach(b => {
