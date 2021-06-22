@@ -141,7 +141,7 @@ class Game {
     this.balls = [];
     this.wiper = new Wiper(
       new Vector2(this.width / 2.0, this.height - 10),
-      this.height * 0.8,
+      this.height * 0.88, // wiper 길이
       100,
       50
     );
@@ -199,7 +199,8 @@ class Game {
 
     let colliders = [];
 
-    this.wiper.update(performance.now());
+    // wiper 속도
+    this.wiper.update(Math.sin(performance.now() / 800) * 1.5);
 
     this.balls.forEach(b => {
       this.balls.forEach(t => {
