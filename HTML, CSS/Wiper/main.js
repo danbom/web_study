@@ -79,6 +79,46 @@ class Ball {
   }
 }
 
+class Wiper {
+  constructor(pos, len, bottomWidth, topWidth) {
+    this.pos = pos;
+    this.len = len;
+    this.bottomWidth = bottomWidth;
+    this.topWidth = topWidth;
+
+    this.base = new Vector2(0, 0);
+    this.tip = new Vector2(0, -len);
+
+    this.rot = 0.0;
+
+    this.update();
+  }
+
+  update() {
+    let cos = Math.cos(rot);
+    let sin = Math.sin(rot);
+
+    this.tPosBase = new Vector2(
+      cos * this.base.x - sin * this.base.y,
+      sin * this.base.x + cos * this.base.y
+    );
+    this.tPosTip = new Vector2(
+      cos * this.tip.x - sin * this.tip.y,
+      sin * this.tip.x + cos * this.tip.y
+    );
+
+    this.tPosBase = this.tPosBase.addV(pos);
+    this.tPosTip = this.tPosTip.addV(pos);
+  }
+
+  render(ctx) {
+    ctx.beginPath();
+    ctx.moveTo(this.tPosBase.x, this.tPosBase.y);
+    ctx.lineTo(this.tPosTip.x, this.tPosTip.y);
+    ctx.stroke();
+  }
+}
+
 class Game {
   constructor(width, height) {
     this.width = width;
@@ -99,7 +139,7 @@ class Game {
 
   init() {
     this.friction = 0.995;
-    this.gravity = 1.0;
+    this.gravity = 0.7;
     this.balls = [];
     const spread = 0.8;
 
