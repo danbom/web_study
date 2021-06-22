@@ -89,12 +89,10 @@ class Wiper {
     this.base = new Vector2(0, 0);
     this.tip = new Vector2(0, -len);
 
-    this.rot = 0.0;
-
     this.update();
   }
 
-  update() {
+  update(rot = 0.0) {
     let cos = Math.cos(rot);
     let sin = Math.sin(rot);
 
@@ -107,8 +105,8 @@ class Wiper {
       sin * this.tip.x + cos * this.tip.y
     );
 
-    this.tPosBase = this.tPosBase.addV(pos);
-    this.tPosTip = this.tPosTip.addV(pos);
+    this.tPosBase = this.tPosBase.addV(this.pos);
+    this.tPosTip = this.tPosTip.addV(this.pos);
   }
 
   render(ctx) {
@@ -141,6 +139,13 @@ class Game {
     this.friction = 0.995;
     this.gravity = 0.7;
     this.balls = [];
+    this.wiper = new Wiper(
+      new Vector2(this.width / 2.0, this.height - 10),
+      this.height * 0.8,
+      100,
+      50
+    );
+
     const spread = 0.8;
 
     for (let i = 0; i < 100; i++) {
@@ -193,6 +198,8 @@ class Game {
     });
 
     let colliders = [];
+
+    this.wiper.update(performance.now());
 
     this.balls.forEach(b => {
       this.balls.forEach(t => {
@@ -270,6 +277,8 @@ class Game {
     this.balls.forEach(b => {
       b.render(this.ctx);
     });
+
+    this.wiper.render(this.ctx);
   }
 }
 
