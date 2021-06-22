@@ -125,7 +125,7 @@ class Game {
 
     this.balls.push(b);
 
-    b = new Ball(new Vector2(200, 100), 10);
+    b = new Ball(new Vector2(200, 110), 10);
     b.addForce(new Vector2(-10, 0));
 
     this.balls.push(b);
