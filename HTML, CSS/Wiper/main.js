@@ -110,6 +110,7 @@ class Wiper {
   }
 
   render(ctx) {
+    // wiper 평면
     const dir = this.tPosTip.subV(this.tPosBase).normalized();
     let nor = new Vector2(-dir.y, dir.x);
     ctx.beginPath();
@@ -133,7 +134,7 @@ class Wiper {
       this.tPosBase.subV(nor.mulS(this.bottomWidth)).x,
       this.tPosBase.subV(nor.mulS(this.bottomWidth)).y
     );
-    ctx.stroke();
+    ctx.fill();
   }
 }
 
@@ -160,10 +161,10 @@ class Game {
     this.gravity = 0.7;
     this.balls = [];
     this.wiper = new Wiper(
-      new Vector2(this.width / 2.0, this.height - 10),
+      new Vector2(this.width / 2.0, this.height + 20), // wiper 위치
       this.height * 0.88, // wiper 길이
-      100,
-      50
+      20, // wiper base 길이
+      1 // wiper tip 길이
     );
 
     const spread = 0.8;
@@ -237,6 +238,12 @@ class Game {
           //   b.pos = b.pos.addV(dir.mulS(gap / 2.0));
         }
       });
+    });
+
+    this.balls.forEach(b => {
+      const mid = this.wiper.tPosBase.addV(this.wiper.tPosTip).divS(2.0);
+
+      if (this.wiper.len + this.wiper.bottomWidth + this.wiper.topWidth)
     });
 
     colliders.forEach(pair => {
