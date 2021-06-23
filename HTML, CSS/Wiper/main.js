@@ -114,10 +114,10 @@ class Wiper {
     let nor = new Vector2(-dir.y, dir.x);
     ctx.beginPath();
     ctx.moveTo(
-      this.tPosBase.x.subV(nor.mulS(this.bottomWidth)),
+      this.tPosBase.subV(nor.mulS(this.bottomWidth)).x,
       this.tPosBase.y
     );
-    ctx.lineTo(this.tPosTip.x.subV(nor.mulS(this.topWidth)), this.tPosTip.y);
+    ctx.lineTo(this.tPosTip.subV(nor.mulS(this.topWidth)).x, this.tPosTip.y);
     // ctx.lineTo(this.tPosTip.x + nor.mulS(this.topWidth), this.tPosTip.y);
     ctx.stroke();
   }
