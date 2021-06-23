@@ -115,10 +115,24 @@ class Wiper {
     ctx.beginPath();
     ctx.moveTo(
       this.tPosBase.subV(nor.mulS(this.bottomWidth)).x,
-      this.tPosBase.y
+      this.tPosBase.subV(nor.mulS(this.bottomWidth)).y
     );
-    ctx.lineTo(this.tPosTip.subV(nor.mulS(this.topWidth)).x, this.tPosTip.y);
-    // ctx.lineTo(this.tPosTip.x + nor.mulS(this.topWidth), this.tPosTip.y);
+    ctx.lineTo(
+      this.tPosTip.subV(nor.mulS(this.topWidth)).x,
+      this.tPosTip.subV(nor.mulS(this.topWidth)).y
+    );
+    ctx.lineTo(
+      this.tPosTip.addV(nor.mulS(this.topWidth)).x,
+      this.tPosTip.addV(nor.mulS(this.topWidth)).y
+    );
+    ctx.lineTo(
+      this.tPosBase.addV(nor.mulS(this.bottomWidth)).x,
+      this.tPosBase.addV(nor.mulS(this.bottomWidth)).y
+    );
+    ctx.lineTo(
+      this.tPosBase.subV(nor.mulS(this.bottomWidth)).x,
+      this.tPosBase.subV(nor.mulS(this.bottomWidth)).y
+    );
     ctx.stroke();
   }
 }
