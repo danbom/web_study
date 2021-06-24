@@ -253,7 +253,25 @@ class Game {
       )
         return;
 
-      const bound = this.wiper.dir.dot(this.wiper.tPosBase.subV(b.pos));
+      const bound = this.wiper.dir.dot(b.pos.subV(this.wiper.tPosBase));
+
+      if (bound < 0) {
+        const dist = b.pos.subV(this.wiper.tPosBase).len();
+        if (dist < b.r + this.wiper.bottomWidth) {
+          const gap = this.wiper.bottomWidth + b.r - dist;
+          const dir = b.pos.subV(this.wiper.tPosBase).normalized();
+          b.pos = b.pos.addV(dir.mulS(gap));
+        }
+      }
+
+      if (bound > this.wiper.len) {
+        const dist = b.pos.subV(this.wiper.tPosBase).len();
+        if (dist < b.r + this.wiper.bottomWidth) {
+          const gap = this.wiper.bottomWidth + b.r - dist;
+          const dir = b.pos.subV(this.wiper.tPosBase).normalized();
+          b.pos = b.pos.addV(dir.mulS(gap));
+        }
+      }
     });
 
     colliders.forEach(pair => {
