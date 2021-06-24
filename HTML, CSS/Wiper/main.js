@@ -107,6 +107,8 @@ class Wiper {
 
     this.tPosBase = this.tPosBase.addV(this.pos);
     this.tPosTip = this.tPosTip.addV(this.pos);
+
+    this.dir = this.tPosTip.subV(this.tPosBase).normalized();
   }
 
   render(ctx) {
@@ -251,7 +253,7 @@ class Game {
       )
         return;
 
-      const bound = this.wiper.tPosBase.subV(b.pos);
+      const bound = this.wiper.dir.dot(this.wiper.tPosBase.subV(b.pos));
     });
 
     colliders.forEach(pair => {
