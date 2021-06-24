@@ -238,7 +238,6 @@ class Game {
 
           b.pos = b.pos.addV(dir.mulS(-gap / 2.0));
           t.pos = t.pos.addV(dir.mulS(gap / 2.0));
-          
         }
       });
     });
@@ -246,7 +245,13 @@ class Game {
     this.balls.forEach(b => {
       const mid = this.wiper.tPosBase.addV(this.wiper.tPosTip).divS(2.0);
 
-      if (this.wiper.len + this.wiper.bottomWidth + this.wiper.topWidth)
+      if (
+        this.wiper.len / 2.0 + this.wiper.bottomWidth + this.wiper.topWidth <
+        b.subV(mid).len() + b.r
+      )
+        return;
+
+      const bound = this.wiper.tPosBase.subV(b.pos);
     });
 
     colliders.forEach(pair => {
