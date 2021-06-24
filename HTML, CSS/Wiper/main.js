@@ -265,7 +265,7 @@ class Game {
       }
 
       if (bound > this.wiper.len) {
-        const dist = b.pos.subV(this.wiper.tPosBase).len();
+        const dist = b.pos.subV(this.wiper.tPosTip).len();
         if (dist < b.r + this.wiper.bottomWidth) {
           const gap = this.wiper.bottomWidth + b.r - dist;
           const dir = b.pos.subV(this.wiper.tPosBase).normalized();
