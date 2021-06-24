@@ -233,9 +233,12 @@ class Game {
         if (dist < b.r + t.r) {
           colliders.push([b, t]);
           dir = dir.normalized();
+
           const gap = b.r + t.r - dist;
+
+          b.pos = b.pos.addV(dir.mulS(-gap / 2.0));
           t.pos = t.pos.addV(dir.mulS(gap / 2.0));
-          //   b.pos = b.pos.addV(dir.mulS(gap / 2.0));
+          
         }
       });
     });
