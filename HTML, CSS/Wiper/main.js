@@ -275,7 +275,7 @@ class Game {
       }
 
       if (bound > 0 && bound <= this.wiper.len){
-        const nor = 
+        const l = this.wiper.nor.mulS(this.wiper.nor.dot(baseToBall).len()); 
       }
 
     });
