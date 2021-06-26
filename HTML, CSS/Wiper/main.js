@@ -249,23 +249,24 @@ class Game {
 
       if (
         this.wiper.len / 2.0 + this.wiper.bottomWidth + this.wiper.topWidth <
-        b.subV(mid).len() + b.r
+        b.pos.subV(mid).len() + b.r
       )
         return;
       const baseToBall = b.pos.subV(this.wiper.tPosBase);
       const bound = this.wiper.dir.dot(baseToBall);
 
       if (bound < 0) {
-        const dist = b.pos.subV(this.wiper.tPosBase).len();
+        let dir = b.pos.subV(this.wiper.tPosBase);
+        const dist = dir.len();
         if (dist < b.r + this.wiper.bottomWidth) {
+          dir = dir.normalized();
           const gap = this.wiper.bottomWidth + b.r - dist;
-          const dir = b.pos.subV(this.wiper.tPosBase).normalized();
           b.pos = b.pos.addV(dir.mulS(gap));
         }
       }
 
       if (bound >= this.wiper.len) {
-        const dir = b.pos.subV(this.wiper.tPosTip);
+        let dir = b.pos.subV(this.wiper.tPosTip);
         const dist = dir.len();
         if (dist < b.r + this.wiper.topWidth) {
             dir = dir.normalized();
@@ -275,13 +276,14 @@ class Game {
       }
 
       if (bound > 0 && bound <= this.wiper.len){
-        const dist = this.wiper.nor.mulS(this.wiper.nor.dot(baseToBall).len()); 
+        const l = this.wiper.nor.mulS(this.wiper.nor.dot(baseToBall));
+        const dist = l.len();
         const lerpedR = (bound / this.wiper.len) * this.wiper.tPosTip + (1 - (bound / this.wiper.len) * this.wiper.tPosBase);
 
         if (dist < lerpedR + b.r){
-            const topOrBott = this.wiper.nor.mulS(this.wiper.nor.dot(baseToBall).len());
+            const topOrBott = this.wiper.nor.dot(baseToBall) > 0 ? 1 : -1;
             const gap = lerpedR + b.r - dist;
-            b.pos = b.pos.addV(this.wiper.nor.mulS(gap));
+            b.pos = b.pos.addV(this.wiper.nor.mulS(gap * topOrBott));
         }
       }
 
