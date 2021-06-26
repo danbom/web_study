@@ -264,14 +264,20 @@ class Game {
         }
       }
 
-      if (bound > this.wiper.len) {
-        const dist = b.pos.subV(this.wiper.tPosTip).len();
-        if (dist < b.r + this.wiper.bottomWidth) {
-          const gap = this.wiper.bottomWidth + b.r - dist;
-          const dir = b.pos.subV(this.wiper.tPosBase).normalized();
+      if (bound >= this.wiper.len) {
+        const dir = b.pos.subV(this.wiper.tPosTip);
+        const dist = dir.len();
+        if (dist < b.r + this.wiper.topWidth) {
+            dir = dir.normalized();
+          const gap = this.wiper.tPosTip + b.r - dist;
           b.pos = b.pos.addV(dir.mulS(gap));
         }
       }
+
+      if (bound > 0 && bound <= this.wiper.len){
+          const d = 
+      }
+
     });
 
     colliders.forEach(pair => {
