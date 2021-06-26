@@ -109,32 +109,32 @@ class Wiper {
     this.tPosTip = this.tPosTip.addV(this.pos);
 
     this.dir = this.tPosTip.subV(this.tPosBase).normalized();
+    this.nor = new Vector2(-this.dir.y, this.dir.x); 
   }
 
   render(ctx) {
     // wiper 평면
-    const dir = this.tPosTip.subV(this.tPosBase).normalized();
-    let nor = new Vector2(-dir.y, dir.x);
+    
     ctx.beginPath();
     ctx.moveTo(
-      this.tPosBase.subV(nor.mulS(this.bottomWidth)).x,
-      this.tPosBase.subV(nor.mulS(this.bottomWidth)).y
+      this.tPosBase.subV(this.nor.mulS(this.bottomWidth)).x,
+      this.tPosBase.subV(this.nor.mulS(this.bottomWidth)).y
     );
     ctx.lineTo(
-      this.tPosTip.subV(nor.mulS(this.topWidth)).x,
-      this.tPosTip.subV(nor.mulS(this.topWidth)).y
+      this.tPosTip.subV(this.nor.mulS(this.topWidth)).x,
+      this.tPosTip.subV(this.nor.mulS(this.topWidth)).y
     );
     ctx.lineTo(
-      this.tPosTip.addV(nor.mulS(this.topWidth)).x,
-      this.tPosTip.addV(nor.mulS(this.topWidth)).y
+      this.tPosTip.addV(this.nor.mulS(this.topWidth)).x,
+      this.tPosTip.addV(this.nor.mulS(this.topWidth)).y
     );
     ctx.lineTo(
-      this.tPosBase.addV(nor.mulS(this.bottomWidth)).x,
-      this.tPosBase.addV(nor.mulS(this.bottomWidth)).y
+      this.tPosBase.addV(this.nor.mulS(this.bottomWidth)).x,
+      this.tPosBase.addV(this.nor.mulS(this.bottomWidth)).y
     );
     ctx.lineTo(
-      this.tPosBase.subV(nor.mulS(this.bottomWidth)).x,
-      this.tPosBase.subV(nor.mulS(this.bottomWidth)).y
+      this.tPosBase.subV(this.nor.mulS(this.bottomWidth)).x,
+      this.tPosBase.subV(this.nor.mulS(this.bottomWidth)).y
     );
     ctx.fill();
   }
