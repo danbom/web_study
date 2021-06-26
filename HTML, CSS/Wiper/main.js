@@ -252,8 +252,8 @@ class Game {
         b.subV(mid).len() + b.r
       )
         return;
-
-      const bound = this.wiper.dir.dot(b.pos.subV(this.wiper.tPosBase));
+      const baseToBall = b.pos.subV(this.wiper.tPosBase);
+      const bound = this.wiper.dir.dot(baseToBall);
 
       if (bound < 0) {
         const dist = b.pos.subV(this.wiper.tPosBase).len();
@@ -275,7 +275,7 @@ class Game {
       }
 
       if (bound > 0 && bound <= this.wiper.len){
-          const d = 
+        const nor = 
       }
 
     });
