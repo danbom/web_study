@@ -169,27 +169,27 @@ class Game {
       1 // wiper tip 길이
     );
 
-    const spread = 0.8;
+    // const spread = 0.8;
 
-    for (let i = 0; i < 100; i++) {
-      let b = new Ball(
-        new Vector2(
-          (Math.random() - 0.5) * this.width * spread + this.width / 2.0,
-          (Math.random() - 0.5) * this.height * spread + this.height / 2.0
-        ),
-        Math.random() * 10 + 15
-      );
+    // for (let i = 0; i < 100; i++) {
+    //   let b = new Ball(
+    //     new Vector2(
+    //       (Math.random() - 0.5) * this.width * spread + this.width / 2.0,
+    //       (Math.random() - 0.5) * this.height * spread + this.height / 2.0
+    //     ),
+    //     Math.random() * 10 + 15
+    //   );
 
-      b.addForce(
-        new Vector2(Math.random() - 0.5, Math.random() - 0.5).mulV(
-          new Vector2(100, 100)
-        )
-      );
-      this.balls.push(b);
-    }
+    //   b.addForce(
+    //     new Vector2(Math.random() - 0.5, Math.random() - 0.5).mulV(
+    //       new Vector2(100, 100)
+    //     )
+    //   );
+    //   this.balls.push(b);
+    // }
 
-    let b = new Ball(new Vector2(100, 100), 10);
-    b.addForce(new Vector2(10, 0));
+    let b = new Ball(new Vector2(500, 100), 10);
+    b.addForce(new Vector2(0, 0));
 
     this.balls.push(b);
 
@@ -223,7 +223,9 @@ class Game {
     let colliders = [];
 
     // wiper 속도
-    this.wiper.update(Math.sin(performance.now() / 800) * 1.5);
+
+    this.wiper.update(-0.6);
+    // this.wiper.update(Math.sin(performance.now() / 800) * 1.5);
 
     this.balls.forEach(b => {
       this.balls.forEach(t => {
@@ -256,6 +258,7 @@ class Game {
       const bound = this.wiper.dir.dot(baseToBall);
 
       if (bound < 0) {
+
         let dir = b.pos.subV(this.wiper.tPosBase);
         const dist = dir.len();
         if (dist < b.r + this.wiper.bottomWidth) {
@@ -278,7 +281,7 @@ class Game {
       if (bound > 0 && bound <= this.wiper.len){
         const l = this.wiper.nor.mulS(this.wiper.nor.dot(baseToBall));
         const dist = l.len();
-        const lerpedR = (bound / this.wiper.len) * this.wiper.tPosTip + (1 - (bound / this.wiper.len) * this.wiper.tPosBase);
+        const lerpedR = (bound / this.wiper.len) * this.wiper.topWidth + (1 - (bound / this.wiper.len)) * this.wiper.bottomWidth;
 
         if (dist < lerpedR + b.r){
             const topOrBott = this.wiper.nor.dot(baseToBall) > 0 ? 1 : -1;
