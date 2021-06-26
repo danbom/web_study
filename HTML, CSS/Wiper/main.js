@@ -276,6 +276,11 @@ class Game {
 
       if (bound > 0 && bound <= this.wiper.len){
         const l = this.wiper.nor.mulS(this.wiper.nor.dot(baseToBall).len()); 
+        const lerpedR = (bound / this.wiper.len) * this.wiper.tPosTip + (1 - (bound / this.wiper.len) * this.wiper.tPosBase);
+
+        if (l < lerpedR + b.r){
+            
+        }
       }
 
     });
