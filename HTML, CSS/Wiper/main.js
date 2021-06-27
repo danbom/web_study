@@ -334,7 +334,7 @@ class Game {
             (Math.random() - 0.5) * this.width * this.spread + this.width / 2.0,
             (Math.random() - 0.5) * this.height * this.spread + this.height / 2.0 - this.height
           ),
-          Math.random() * 5 + 15
+          Math.random() * 2 + 15
         );
   
         b.addForce(
