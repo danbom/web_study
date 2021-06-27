@@ -8,4 +8,5 @@ canvas {
     height: 100vh;
     overflow: hidden;
     background: linear-gradient(#8E2DE2, #4A00E0);
+    /* background: linear-gradient(#ffffff80, #4A00E0); */
 }

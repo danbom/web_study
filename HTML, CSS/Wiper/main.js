@@ -74,8 +74,9 @@ class Ball {
 
   render(ctx) {
     ctx.beginPath();
+    ctx.fillStyle = "#ffffff80";
     ctx.arc(this.pos.x, this.pos.y, this.r, 0, 2 * Math.PI);
-    ctx.stroke();
+    ctx.fill();
   }
 }
 
@@ -114,7 +115,7 @@ class Wiper {
 
   render(ctx) {
     // wiper 평면
-    
+    ctx.fillStyle = "#ffffff";
     ctx.beginPath();
     ctx.moveTo(
       this.tPosBase.subV(this.nor.mulS(this.bottomWidth)).x,
@@ -159,25 +160,29 @@ class Game {
   }
 
   init() {
-    this.friction = 0.995;
+    this.friction = 0.996; // ball 튀는 정도
     this.gravity = 1.6; // ball 속도
+    this.screenBounds = false;
+    this.maxBalls = 100; // ball max 개수
     this.balls = [];
+    this.wiperForce = 2.0;
     this.wiper = new Wiper(
       new Vector2(this.width / 2.0, this.height + 20), // wiper 위치
       this.height * 0.88, // wiper 길이
-      20, // wiper base 길이
-      1 // wiper tip 길이
+      18, // wiper base 길이
+      2 // wiper tip 길이
     );
 
-    const spread = 0.8;
+    this.spread = 0.8;
 
-    for (let i = 0; i < 100; i++) {
+
+    for (let i = 0; i < this.maxBalls - this.balls.length; i++) {
       let b = new Ball(
         new Vector2(
-          (Math.random() - 0.5) * this.width * spread + this.width / 2.0,
-          (Math.random() - 0.5) * this.height * spread + this.height / 2.0
+          (Math.random() - 0.5) * this.width * this.spread + this.width / 2.0,
+          (Math.random() - 0.5) * this.height * this.spread + this.height / 2.0 - this.height
         ),
-        Math.random() * 10 + 15
+        Math.random() * 5 + 15
       );
 
       b.addForce(
@@ -225,7 +230,7 @@ class Game {
     // wiper 속도
 
     // this.wiper.update(-0.6);
-    this.wiper.update(Math.sin(performance.now() / 800) * 1.5);
+    this.wiper.update(Math.sin(performance.now() / 1000) * 1.5);
 
     this.balls.forEach(b => {
       this.balls.forEach(t => {
@@ -279,16 +284,19 @@ class Game {
       }
 
       if (bound > 0 && bound <= this.wiper.len){
-        const l = this.wiper.nor.mulS(this.wiper.nor.dot(baseToBall));
-        const dist = l.len();
-        const lerpedR = (bound / this.wiper.len) * this.wiper.topWidth + (1 - (bound / this.wiper.len)) * this.wiper.bottomWidth;
+        const nor = this.wiper.nor.mulS(this.wiper.nor.dot(baseToBall));
+        const dist = nor.len();
+        const boundsPercentage = bound / this.wiper.len; // ball이 wiper에서 튀는 정도
+        const lerpedR = boundsPercentage * this.wiper.topWidth + (1 - boundsPercentage) * this.wiper.bottomWidth;
 
         if (dist < lerpedR + b.r){
             const topOrBott = this.wiper.nor.dot(baseToBall) > 0 ? 1 : -1;
             const gap = lerpedR + b.r - dist;
             b.pos = b.pos.addV(this.wiper.nor.mulS(gap * topOrBott));
 
-            b.v = this.wiper.nor.dot(b.v).mulS(-2);
+            b.v = b.v.addV(this.wiper.nor.mulS(this.wiper.nor.dot(b.v) * (-2)));
+            b.addForce(nor.mulS(topOrBott).mulS(boundsPercentage * this.wiperForce));
+
         }
       }
 
@@ -320,27 +328,64 @@ class Game {
       b.addForce(new Vector2(0, this.gravity));
     });
 
-    this.balls.forEach(b => {
-      if (b.pos.x - b.r < 0) {
-        b.pos.x = b.r;
-        b.v.x = b.v.x * -1;
+    for (let i = 0; i < this.maxBalls - this.balls.length; i++) {
+        let b = new Ball(
+          new Vector2(
+            (Math.random() - 0.5) * this.width * this.spread + this.width / 2.0,
+            (Math.random() - 0.5) * this.height * this.spread + this.height / 2.0 - this.height
+          ),
+          Math.random() * 5 + 15
+        );
+  
+        b.addForce(
+          new Vector2(Math.random() - 0.5, Math.random() - 0.5).mulV(
+            new Vector2(100, 200)
+          )
+        );
+        this.balls.push(b);
       }
 
-      if (b.pos.y - b.r < 0) {
-        b.pos.y = b.r;
-        b.v.y = b.v.y * -1;
-      }
+    for (let i = 0; i < this.balls.length; i++){
+        const b = this.balls[i];
+        if (this.screenBounds) {
+              if (b.pos.x - b.r < 0) {
+                b.pos.x = b.r;
+                b.v.x = b.v.x * -1;
+              }
+        
+              if (b.pos.y - b.r < 0) {
+                b.pos.y = b.r;
+                b.v.y = b.v.y * -1;
+              }
+        
+              if (b.pos.x + b.r >= this.width) {
+                b.pos.x = this.width - b.r;
+                b.v.x = b.v.x * -1;
+              }
+        
+              if (b.pos.y + b.r >= this.height) {
+                b.pos.y = this.height - b.r;
+                b.v.y = b.v.y * -1;
+              }
 
-      if (b.pos.x + b.r >= this.width) {
-        b.pos.x = this.width - b.r;
-        b.v.x = b.v.x * -1;
-      }
+        }
+        else {
+            if (b.pos.x + b.r < 0){
+                this.balls.splice(i,1);
+            }
 
-      if (b.pos.y + b.r >= this.height) {
-        b.pos.y = this.height - b.r;
-        b.v.y = b.v.y * -1;
-      }
-    });
+            if (b.pos.x - b.r >= this.width){
+                this.balls.splice(i,1);
+            }
+
+            if (b.pos.y - b.r >= this.height){
+                this.balls.splice(i,1);
+            }
+
+            
+        }
+    }
+
   }
 
   render() {
