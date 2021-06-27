@@ -161,11 +161,11 @@ class Game {
 
   init() {
     this.friction = 0.996; // ball 튀는 정도
-    this.gravity = 1.6; // ball 속도
+    this.gravity = 1.2; // ball 속도
     this.screenBounds = false;
     this.maxBalls = 100; // ball max 개수
     this.balls = [];
-    this.wiperForce = 2.0;
+    this.wiperForce = 2.2;
     this.wiper = new Wiper(
       new Vector2(this.width / 2.0, this.height + 20), // wiper 위치
       this.height * 0.88, // wiper 길이
@@ -182,7 +182,7 @@ class Game {
           (Math.random() - 0.5) * this.width * this.spread + this.width / 2.0,
           (Math.random() - 0.5) * this.height * this.spread + this.height / 2.0 - this.height
         ),
-        Math.random() * 5 + 15
+        Math.random() * 8 + 15
       );
 
       b.addForce(
