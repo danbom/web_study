@@ -160,7 +160,7 @@ class Game {
 
   init() {
     this.friction = 0.995;
-    this.gravity = 0.7;
+    this.gravity = 1.6; // ball 속도
     this.balls = [];
     this.wiper = new Wiper(
       new Vector2(this.width / 2.0, this.height + 20), // wiper 위치
@@ -169,24 +169,24 @@ class Game {
       1 // wiper tip 길이
     );
 
-    // const spread = 0.8;
+    const spread = 0.8;
 
-    // for (let i = 0; i < 100; i++) {
-    //   let b = new Ball(
-    //     new Vector2(
-    //       (Math.random() - 0.5) * this.width * spread + this.width / 2.0,
-    //       (Math.random() - 0.5) * this.height * spread + this.height / 2.0
-    //     ),
-    //     Math.random() * 10 + 15
-    //   );
+    for (let i = 0; i < 100; i++) {
+      let b = new Ball(
+        new Vector2(
+          (Math.random() - 0.5) * this.width * spread + this.width / 2.0,
+          (Math.random() - 0.5) * this.height * spread + this.height / 2.0
+        ),
+        Math.random() * 10 + 15
+      );
 
-    //   b.addForce(
-    //     new Vector2(Math.random() - 0.5, Math.random() - 0.5).mulV(
-    //       new Vector2(100, 100)
-    //     )
-    //   );
-    //   this.balls.push(b);
-    // }
+      b.addForce(
+        new Vector2(Math.random() - 0.5, Math.random() - 0.5).mulV(
+          new Vector2(100, 100)
+        )
+      );
+      this.balls.push(b);
+    }
 
     let b = new Ball(new Vector2(500, 100), 10);
     b.addForce(new Vector2(0, 0));
@@ -224,8 +224,8 @@ class Game {
 
     // wiper 속도
 
-    this.wiper.update(-0.6);
-    // this.wiper.update(Math.sin(performance.now() / 800) * 1.5);
+    // this.wiper.update(-0.6);
+    this.wiper.update(Math.sin(performance.now() / 800) * 1.5);
 
     this.balls.forEach(b => {
       this.balls.forEach(t => {
@@ -287,6 +287,8 @@ class Game {
             const topOrBott = this.wiper.nor.dot(baseToBall) > 0 ? 1 : -1;
             const gap = lerpedR + b.r - dist;
             b.pos = b.pos.addV(this.wiper.nor.mulS(gap * topOrBott));
+
+            b.v = this.wiper.nor.dot(b.v).mulS(-2);
         }
       }
 
