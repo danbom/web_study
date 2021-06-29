@@ -25,6 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   background: #f6f8ff;
+  overflow: hidden;
 }
 body .dribbble {
   position: fixed;
