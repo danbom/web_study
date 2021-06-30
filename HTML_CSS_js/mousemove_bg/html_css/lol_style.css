@@ -24,6 +24,49 @@
   background: no-repeat center url("../icon/ionia.jpg");
 }
 
+.dark-mode .container {
+  background: no-repeat center url("../icon/군도'.jpg");  
+}
+
+.dark-mode .container #scene #text2 {
+  position: absolute;
+  display: flex !important;
+  position: relative;
+  color: #083a3a;
+  font-size: 8vw;
+  letter-spacing: -0.5vw;
+  z-index: 100;
+  transition: 0.25s;
+}
+
+.dark-mode .container #scene #text2 span {
+  position: relative !important;
+  display: inline-block;
+  text-shadow: 0 0 18px #fff;
+}
+
+.dark-light {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: auto;
+  flex-shrink: 0;
+  position: absolute;
+  right: 1.5vw;
+  top: 3vh;
+  width: 1.5vw;
+  /* height: 22px; */
+  color: #fff;
+  flex-shrink: 0;
+  
+}
+.dark-light svg {
+  width: 100%;
+  fill: transparent;
+  transition: 0.5s;
+  
+}
+
 .container #scene {
   display: flex;
   justify-content: center;
@@ -31,12 +74,12 @@
   height: 100%;
 }
 
-.container #scene #text1 {
+/* .container #scene #text1 {
   position: absolute;
   display: flex !important;
   position: relative;
-  /* margin-right: 7vw; */
-  color: #fff;
+  margin-right: 3vw;
+  color: #ffffff95;
   font-size: 5vw;
   letter-spacing: -0.5vw;
   z-index: 100;
@@ -48,16 +91,17 @@
   text-shadow: 1px 1px 0 #ffffff27, 2px 2px 0 #ffffff27, 3px 3px 0 #ffffff27,
     4px 4px 0 #ffffff27, 5px 5px 0 #ffffff27, 6px 6px 0 #ffffff27,
     7px 7px 0 #ffffff27, 8px 8px 0 #ffffff27, 25px 35px 0 rgba(0, 0, 0, 0.274);
-}
+} */
 
 .container #scene #text2 {
-  /* position: absolute; */
+  position: absolute;
   display: flex !important;
-  /* position: relative; */
+  position: relative;
   color: #fff;
   font-size: 8vw;
   letter-spacing: -0.5vw;
   z-index: 100;
+  transition: 0.25s;
 }
 
 .container #scene #text2 span {
@@ -67,6 +111,7 @@
     4px 4px 0 #ffffff27, 5px 5px 0 #ffffff27, 6px 6px 0 #ffffff27,
     7px 7px 0 #ffffff27, 8px 8px 0 #ffffff27, 25px 35px 0 rgba(0, 0, 0, 0.274);
 }
+
 .layer {
   position: absolute;
   top: 0;
@@ -82,4 +127,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.dark-mode {
+  --body-bg-color: #1d1d1d;
 }
