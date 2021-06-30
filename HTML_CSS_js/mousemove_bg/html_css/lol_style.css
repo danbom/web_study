@@ -23,10 +23,12 @@
   height: 100vh;
   background: no-repeat center url("../icon/ionia.png");
   background-size: cover;
+  /* transition: all ease 2s 0s; */
 }
 
 .dark-mode .container {
   background: no-repeat center url("../icon/군도'.jpg");  
+  /* transition: all ease 2s 0s; */
 }
 
 .dark-mode .container #scene #text2 {
@@ -72,6 +74,18 @@
   width: 100%;
   fill: #fff;
   transition: 0.5s; 
+}
+
+.dark-mode .banner .container .layer img {
+  -webkit-filter : grayscale(100%);
+  filter: gray;
+  transition: 0.5s;
+}
+
+.banner .container .layer img {
+  -webkit-filter : grayscale(0%);
+  filter: none;
+  transition: 0.5s;
 }
 
 .container #scene {
