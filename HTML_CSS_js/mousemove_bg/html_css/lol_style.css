@@ -31,17 +31,17 @@
   height: 100%;
 }
 
-.container #scene #text {
+.container #scene #text1 {
   position: absolute;
   display: flex !important;
   position: relative;
   color: #fff;
-  font-size: 9vw;
+  font-size: 5vw;
   letter-spacing: -0.5vw;
   z-index: 100;
 }
 
-.container #scene #text span {
+.container #scene #text1 span {
   position: relative !important;
   display: inline-block;
   text-shadow: 1px 1px 0 #ffffff27, 2px 2px 0 #ffffff27, 3px 3px 0 #ffffff27,
@@ -49,6 +49,23 @@
     7px 7px 0 #ffffff27, 8px 8px 0 #ffffff27, 25px 35px 0 rgba(0, 0, 0, 0.274);
 }
 
+.container #scene #text2 {
+  position: absolute;
+  display: flex !important;
+  position: relative;
+  color: #fff;
+  font-size: 8vw;
+  letter-spacing: -0.5vw;
+  z-index: 100;
+}
+
+.container #scene #text2 span {
+  position: relative !important;
+  display: inline-block;
+  text-shadow: 1px 1px 0 #ffffff27, 2px 2px 0 #ffffff27, 3px 3px 0 #ffffff27,
+    4px 4px 0 #ffffff27, 5px 5px 0 #ffffff27, 6px 6px 0 #ffffff27,
+    7px 7px 0 #ffffff27, 8px 8px 0 #ffffff27, 25px 35px 0 rgba(0, 0, 0, 0.274);
+}
 .layer {
   position: absolute;
   top: 0;
