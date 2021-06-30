@@ -35,6 +35,7 @@
   position: absolute;
   display: flex !important;
   position: relative;
+  margin-right: 7vw;
   color: #fff;
   font-size: 5vw;
   letter-spacing: -0.5vw;
@@ -51,7 +52,7 @@
 
 .container #scene #text2 {
   position: absolute;
-  display: flex !important;
+  display: contents !important;
   position: relative;
   color: #fff;
   font-size: 8vw;
