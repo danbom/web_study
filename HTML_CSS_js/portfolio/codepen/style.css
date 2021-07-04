@@ -1,4 +1,11 @@
-@CHARSET "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100;200;300;400;500;600;700;800;900&family=Yomogi&display=swap');
+
+* {
+    font-family: 'Encode Sans SC', sans-serif;
+}
+
 /* Reset CSS
  * --------------------------------------- */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
@@ -71,6 +78,7 @@ header {
   justify-content: space-between; /* 로고와 리스트 중간에 space 삽입 */
   align-items: center; /* 높이 가운데로 정렬 */
   z-index: 10000; /* 높으면 위로 올라오나봄 */
+  
 }
 
 header ul {
@@ -99,27 +107,30 @@ header ul li a.active {
   font-weight: 600;
 }
 
+/* Section-1
+ * --------------------------------------- */
+
+#section-1 {
+    background-color: #64A651 !important;
+}
+
 h1{
-    color: #2b3641;
+    color: #e7e2e1;
     font-size: 3em;
     font-weight: 900;
     padding-left: 8vw;
 }
 
 h2{
-    font-size: 1.2em;
-    font-weight: 100;
+    font-size: 1.1em;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
-    color: #2b3641;
+    color: #D9D3D2;
     margin-top: 0.5em;
     padding-right: 30px;
     padding-left: 8vw;
-}
-
-.mini-text {
-    color: #fff;
-    text-align: center;
+    line-height: 1.2em;
 }
 
 #section-1 li {
@@ -133,24 +144,75 @@ h2{
     display: block;
     color: #fff;
 }
-h3{
-    font-size: 5em;
-    text-align: center;
-    color: #fff;
-    font-weight: bold;
-}
-#logo{
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    color: #fff;
-    font-weight: bold;
-    z-index: 99;
-    font-size: 1.9em;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-}
+
+/* Section-2
+ * --------------------------------------- */
 
 #section-2 {
-    background: linear-gradient(#F2C063, #D97652) !important;
+    background: linear-gradient(#64A651, #718C49) !important;
+    display: flex;
 }
+
+.mini-text-zone {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 25vh;
+}
+
+.mini-text {
+    color: #e7e2e1;
+    font-size: 0.97em;
+    font-weight: 500;
+    font-family: 'Yomogi', cursive;
+    line-height: 1.25em;
+}
+
+.text-zone {
+    position: absolute;
+    width: 100vw;
+    display: block;
+    text-align: center;
+    top: 35vh;
+}
+
+.big-text {
+    width: 100vw;
+    text-align: center;
+    padding: 0 24vw;  
+}
+
+.small-text {
+    width: 100vw;
+    text-align: center;
+    padding: 2vh 20vw; 
+}
+
+#section-2 h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    line-height: 1.5em;
+    width: 100%;
+    color: #f1eceb;
+}
+
+#section-2 h3 {
+    color: #e7e2e1;
+    font-size: 1.1em;
+    font-weight: 300;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    line-height: 1.5em;
+    width: 100%;
+}
+
+/* Section-3
+ * --------------------------------------- */
+
+ #section-3 {
+     background: linear-gradient(#718C49, rgb(109, 173, 53));
+ }
