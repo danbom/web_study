@@ -126,7 +126,7 @@
             }
 
             #section-1 {
-                text-align: center;
+                /* text-align: center; */
                 background: #111; 
                 /* 왜 색이 안먹지 */
             }
@@ -134,28 +134,28 @@
             #section-1 h2:before {
                 content: "";
                 display: inline-block;
-                height: 201px;
-                width: 188px;
-                background-image: url(public/imgs/angular-fullpage-logo.png);
-                background-repeat: no-repeat;
-                background-size: contain;
-                background-position: 50%;
-                vertical-align: bottom;
-                margin-right: 22px;
+                height: 50px;
+                width: 60px;
             }
 
             #section-1 h2 {
                 color: #fff;
-                font-size: 5rem;
+                font-size: 4rem;
                 font-weight: 900;
             }
 
+            #section-1 h1:before {
+                content: "";
+                display: inline-block;
+                height: 1px;
+                width: 60px;
+            }
+
             #section-1 h1 {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 font-weight: 100;
                 -webkit-font-smoothing: antialiased;
                 -moz-font-smoothing: antialiased;
-                margin: 1.5em auto 1em auto;
                 color: #fff;
             }
 
@@ -168,13 +168,13 @@
                 padding: 0.93em 1.87em;
                 background: #075f98;
                 border-radius: 5px;
-                display: block;
                 color: #fff;
             }
 
             .section-1-extensionsButton {
                 background: #fff;
                 color: #282b33;
+                font-weight: 700;
             }
 
             h3 {

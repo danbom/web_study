@@ -15,10 +15,10 @@
                     font-size: 0.85em !important;
                 }
 
-                #section-1 h2:before {
+                /* #section-1 h2:before {
                     height: 135px;
                     width: 156px;
-                }
+                } */
             }
 
             @media screen and (max-width: 1030px) {
@@ -58,10 +58,10 @@
                     font-size: 6.5em !important;
                 }
 
-                #section-1 h2:before {
+                /* #section-1 h2:before {
                     height: 99px;
                     width: 115px;
-                }
+                } */
             }
 
             @media screen and (max-width: 630px) {

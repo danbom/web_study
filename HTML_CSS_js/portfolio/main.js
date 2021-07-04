@@ -11153,7 +11153,7 @@
               null
             )),
             Go(33, 16384, null, 0, va, [], { href: [0, "href"] }, null),
-            (e()(), hi(-1, null, ["Extensions"])),
+            (e()(), hi(-1, null, ["hire me!"])),
             (e()(),
             uo(35, 0, null, null, 3, "li", [], null, null, null, null, null)),
             (e()(),
@@ -11165,9 +11165,9 @@
               2,
               "a",
               [
-                ["class", "section-1-button"],
-                ["href", "https://github.com/alvarotrigo/angular-fullpage"],
-                ["rel", "noopener"],
+                // ["class", "section-1-button"],
+                // ["href", "https://github.com/alvarotrigo/angular-fullpage"],
+                // ["rel", "noopener"],
               ],
               null,
               [[null, "click"]],
@@ -11181,7 +11181,7 @@
               null
             )),
             Go(37, 16384, null, 0, va, [], { href: [0, "href"] }, null),
-            (e()(), hi(-1, null, ["View on Github"])),
+            (e()(), hi(-1, null, [""])),
             (e()(),
             uo(
               39,
