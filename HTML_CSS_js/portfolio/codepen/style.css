@@ -114,22 +114,22 @@ header ul li a.active {
     background-color: #64A651 !important;
 }
 
-h1{
-    color: #e7e2e1;
+#section-1 h1{
+    color: #f1eceb;
     font-size: 3em;
     font-weight: 900;
-    padding-left: 8vw;
+    padding-left: 15vw;
 }
 
-h2{
+#section-1 h2{
     font-size: 1.1em;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
-    color: #D9D3D2;
+    color: #f1eceb;
     margin-top: 0.5em;
     padding-right: 30px;
-    padding-left: 8vw;
+    padding-left: 15vw;
     line-height: 1.2em;
 }
 
@@ -157,14 +157,13 @@ h2{
     position: absolute;
     width: 100%;
     text-align: center;
-    top: 25vh;
+    top: 20vh;
 }
 
 .mini-text {
-    color: #e7e2e1;
-    font-size: 0.97em;
+    color: #f1eceb;
+    font-size: 0.9em;
     font-weight: 500;
-    font-family: 'Yomogi', cursive;
     line-height: 1.25em;
 }
 
@@ -189,7 +188,7 @@ h2{
 }
 
 #section-2 h2 {
-    font-size: 1.8em;
+    font-size: 1.9em;
     font-weight: 600;
     position: relative;
     width: 100%;
@@ -200,8 +199,8 @@ h2{
 }
 
 #section-2 h3 {
-    color: #e7e2e1;
-    font-size: 1.1em;
+    color: #fff;
+    font-size: 1em;
     font-weight: 300;
     position: relative;
     width: 100%;
@@ -214,5 +213,5 @@ h2{
  * --------------------------------------- */
 
  #section-3 {
-     background: linear-gradient(#718C49, rgb(109, 173, 53));
+     background: #718C49 !important;
  }
