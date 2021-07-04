@@ -10909,7 +10909,7 @@
               null
             )),
             Go(6, 16384, null, 0, va, [], { href: [0, "href"] }, null),
-            (e()(), hi(-1, null, ["Section 1"])),
+            (e()(), hi(-1, null, ["intro"])),
             (e()(),
             uo(
               8,
@@ -10946,7 +10946,7 @@
               null
             )),
             Go(10, 16384, null, 0, va, [], { href: [0, "href"] }, null),
-            (e()(), hi(-1, null, ["Section 2"])),
+            (e()(), hi(-1, null, ["skills"])),
             (e()(),
             uo(
               12,
@@ -10983,7 +10983,7 @@
               null
             )),
             Go(14, 16384, null, 0, va, [], { href: [0, "href"] }, null),
-            (e()(), hi(-1, null, ["Section 3"])),
+            (e()(), hi(-1, null, ["works"])),
             (e()(),
             uo(16, 0, null, null, 5, "li", [], null, null, null, null, null)),
             (e()(),
@@ -11823,7 +11823,7 @@
               null
             )),
             (e()(), hi(-1, null, [">"])),
-            (e()(), hi(-1, null, ["\n        Section 1\n         "])),
+            (e()(), hi(-1, null, ["\n        intro\n         "])),
             (e()(),
             uo(
               113,
@@ -12101,7 +12101,7 @@
               null
             )),
             (e()(), hi(-1, null, [">"])),
-            (e()(), hi(-1, null, ["Section 2"])),
+            (e()(), hi(-1, null, ["skills"])),
             (e()(),
             uo(
               153,
@@ -12184,7 +12184,7 @@
               null
             )),
             (e()(), hi(-1, null, [">"])),
-            (e()(), hi(-1, null, ["Section 3"])),
+            (e()(), hi(-1, null, ["works"])),
             (e()(),
             uo(
               166,
@@ -12973,7 +12973,7 @@
             )),
             (e()(),
             uo(279, 0, null, null, 1, "h3", [], null, null, null, null, null)),
-            (e()(), hi(-1, null, ["Section 3"])),
+            (e()(), hi(-1, null, ["works"])),
             (e()(),
             uo(
               281,
