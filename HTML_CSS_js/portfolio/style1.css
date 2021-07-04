@@ -127,47 +127,46 @@
 
             #section-1 {
                 /* text-align: center; */
-                background: #111; 
-                /* 왜 색이 안먹지 */
+                background: #222 !important; 
             }
 
             #section-1 h2:before {
                 content: "";
                 display: inline-block;
-                height: 50px;
-                width: 60px;
+                height: 1vh;
+                width: 4vw;
             }
 
             #section-1 h2 {
                 color: #fff;
-                font-size: 4rem;
-                font-weight: 900;
+                font-size: 2.5rem;
+                font-weight: 800;
             }
 
             #section-1 h1:before {
                 content: "";
                 display: inline-block;
-                height: 1px;
-                width: 60px;
+                height: 1vh;
+                width: 4vw;
             }
 
             #section-1 h1 {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 font-weight: 100;
                 -webkit-font-smoothing: antialiased;
                 -moz-font-smoothing: antialiased;
                 color: #fff;
+                margin-top: 0.5em;
             }
 
             #section-1 li {
                 display: inline-block;
-                margin: 1.25em 0.3em;
+                margin: 2.5vh 4vw;
             }
 
             .section-1-button {
-                padding: 0.93em 1.87em;
-                background: #075f98;
-                border-radius: 5px;
+                padding: 0.7em 1.5em;
+                border-radius: 10px;
                 color: #fff;
             }
 
@@ -175,6 +174,7 @@
                 background: #fff;
                 color: #282b33;
                 font-weight: 700;
+                font-size: 1.1em;
             }
 
             h3 {
@@ -185,15 +185,7 @@
             }
 
             #logo {
-                position: fixed;
-                top: 20px;
-                left: 20px;
-                color: #fff;
-                font-weight: 700;
-                z-index: 99;
-                font-size: 1.9em;
-                -webkit-font-smoothing: antialiased;
-                -moz-font-smoothing: antialiased;
+                display: none;
             }
 
             #menu-line {

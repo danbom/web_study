@@ -10839,7 +10839,7 @@
               "a",
               [
                 ["alt", "fullPage homepage"],
-                ["href", "https://alvarotrigo.com/fullPage/"],
+                ["href", ""],
                 ["id", "logo"],
               ],
               null,
@@ -11117,7 +11117,7 @@
             )),
             (e()(),
             uo(26, 0, null, null, 1, "h2", [], null, null, null, null, null)),
-            (e()(), hi(-1, null, ["HI"])),
+            (e()(), hi(-1, null, ["HI GUYS, "], ["👋"])),
             (e()(),
             uo(28, 0, null, null, 1, "h1", [], null, null, null, null, null)),
             (e()(),
