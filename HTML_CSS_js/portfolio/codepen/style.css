@@ -1,0 +1,156 @@
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+    font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+*{
+    -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
+    -moz-box-sizing: border-box; /* <=28 */
+    box-sizing: border-box;
+}
+
+/* Custom
+ * --------------------------------------- */
+body {
+    font-family: arial, helvetica;
+}
+.section{
+    position: relative;
+    /* text-align: center; */
+}
+
+/* Header
+ * --------------------------------------- */
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5vh;
+  display: inline-block;
+  justify-content: space-between; /* 로고와 리스트 중간에 space 삽입 */
+  align-items: center; /* 높이 가운데로 정렬 */
+  z-index: 10000; /* 높으면 위로 올라오나봄 */
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  list-style: none; /* 못생긴 리스트의 점들 없애줌 */
+  margin-left: 20px; /* 리스트의 각 요소들 왼쪽 간격 20px씩 둔다 */
+}
+
+header ul li a {
+  /* 하이퍼링크 css */
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  /* 사용자의 커서가 요소에 올라가 있을 때 적용 */
+  /* 첫화면은 home이 active한 상태, 나머지는 내가 알아서.. */
+  text-decoration: #fff wavy underline;
+  font-weight: 600;
+}
+
+h1{
+    color: #2b3641;
+    font-size: 3em;
+    font-weight: 900;
+    padding-left: 8vw;
+}
+
+h2{
+    font-size: 1.2em;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    color: #2b3641;
+    margin-top: 0.5em;
+    padding-right: 30px;
+    padding-left: 8vw;
+}
+
+.mini-text {
+    color: #fff;
+    text-align: center;
+}
+
+#section-1 li {
+    display: inline-block;
+    margin: 1.25em 0.3em;
+}
+.section-1-button{
+    padding: 0.93em 1.87em;
+    background: #35495e;
+    border-radius: 5px;
+    display: block;
+    color: #fff;
+}
+h3{
+    font-size: 5em;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+#logo{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-weight: bold;
+    z-index: 99;
+    font-size: 1.9em;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+}
+
+#section-2 {
+    background: linear-gradient(#F2C063, #D97652) !important;
+}
