@@ -448,7 +448,7 @@ header ul li a:hover {
     margin: 0 7px;
 }
 
-.img-zone {
+/* .img-zone {
     display: flex;
     padding-top: 18vh;
     padding-left: 18vw;
@@ -468,4 +468,21 @@ header ul li a:hover {
 .right-img-zone {
     width: 50vw;
     overflow: hidden;
+} */
+
+.rodang-img-zone {
+    display: block;
+    width: 100vw;
+    justify-content: center;
+    padding-top: 15vh;
+}
+
+.rodang-img-zone img {
+    width: 10%;
+}
+
+.rodang-img-zone .svg {
+    width: 4%;
+    padding-top: 20px;
+    padding-bottom: 35px;
 }
