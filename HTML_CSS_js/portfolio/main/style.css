@@ -5,6 +5,7 @@
 * {
     font-family: 'Encode Sans SC', sans-serif;
     scroll-behavior: smooth;
+    
 }
 
 /* Reset CSS
@@ -248,6 +249,11 @@ header ul li a:hover {
     border-radius: 14px;
 }
 
+.nav-alert i {
+    font-size: 0.5rem;
+    margin-left: 0.21rem;
+}
+
 .navigation {
     position: absolute;
     top: 12vh;
@@ -291,20 +297,6 @@ header ul li a:hover {
 
 .navigation .toggle::before {
     content: "+";
-    position: absolute;
-    font-size: 2em;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    color: #fff;
-    transition: 0.5s;
-}
-
-.navigation .toggle::before:hover {
-    content: "+aewf";
     position: absolute;
     font-size: 2em;
     font-weight: 400;
@@ -373,3 +365,107 @@ header ul li a:hover {
 .navigation ul li:hover a .title {
     color:#333;
 } 
+
+.fp-controlArrow.fp-prev {
+    left: 8vw;
+    width: 0;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent #333 transparent transparent;
+}
+
+.fp-controlArrow.fp-next {
+    right: 8vw;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent transparent transparent #333;
+}
+
+.slide-zone {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.works-title {
+    position: absolute;
+    top: 20vh;
+    width: 100vw;
+    font-size: 3rem;
+    font-weight: 900;
+    color:#252525;
+}
+
+.works-date {
+    position: absolute;
+    top: 17vh;
+    width: 100vw;
+    font-size: 0.87rem;
+    font-weight: 400;
+    color:#252525;
+}
+
+.works-desc {
+    position: absolute;
+    top: 26.5vh;
+    width: 100vw;
+    padding: 0 30vw;
+    font-size: 0.98rem;
+    font-weight: 400;
+    color:#252525;
+}
+
+.well-bing-svg-zone {
+    position: absolute;
+    width: 100vw;
+    top: 15vh;
+    padding-top: 17vh;
+    padding-bottom: 5vh;
+}
+
+.well-bing-svg-zone img {
+    width: 19%;
+    padding-top: 10vh;
+}
+
+.well-bing-img-zone {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    top: 47vh;
+}
+
+.well-bing-img-zone-left {
+    padding-left: 10vw;
+    width: 50vw;
+}
+
+.well-bing-img-zone-right {
+    padding-right: 10vw;
+    width: 50vw;
+}
+
+.well-bing-img-zone img {
+    width: 15%;
+    margin: 0 7px;
+}
+
+.img-zone {
+    display: flex;
+    padding-top: 18vh;
+    padding-left: 18vw;
+    padding-right: 18vw;
+}
+
+.left-img-zone {
+    width: 50vw;
+    overflow: hidden;
+}
+
+.left-img-zone img {
+    width: 56%;
+    cursor: pointer;
+}
+
+.right-img-zone {
+    width: 50vw;
+    overflow: hidden;
+}
