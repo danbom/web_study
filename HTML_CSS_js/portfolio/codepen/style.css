@@ -96,7 +96,7 @@ header ul li a {
   /* 하이퍼링크 css */
   text-decoration: none;
   padding: 6px 15px;
-  color: #fff;
+  color: rgb(26, 26, 26);
 }
 
 header ul li a:hover,
@@ -111,11 +111,11 @@ header ul li a.active {
  * --------------------------------------- */
 
 #section-1 {
-    background-color: #64A651 !important;
+    background-color: #e8e6ec !important;
 }
 
 #section-1 h1{
-    color: #f1eceb;
+    color: #1f1f1f;
     font-size: 3em;
     font-weight: 900;
     padding-left: 15vw;
@@ -126,7 +126,7 @@ header ul li a.active {
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
-    color: #f1eceb;
+    color: #181818;
     margin-top: 0.5em;
     padding-right: 30px;
     padding-left: 15vw;
@@ -142,14 +142,14 @@ header ul li a.active {
     background: #35495e;
     border-radius: 5px;
     display: block;
-    color: #fff;
+    color: #181818;
 }
 
 /* Section-2
  * --------------------------------------- */
 
 #section-2 {
-    background: linear-gradient(#64A651, #718C49) !important;
+    background: linear-gradient(#e8e6ec, #d8d6db) !important;
     display: flex;
 }
 
@@ -161,7 +161,7 @@ header ul li a.active {
 }
 
 .mini-text {
-    color: #f1eceb;
+    color: #181818;
     font-size: 0.9em;
     font-weight: 500;
     line-height: 1.25em;
@@ -195,11 +195,11 @@ header ul li a.active {
     padding: 0;
     line-height: 1.5em;
     width: 100%;
-    color: #f1eceb;
+    color: #181818;
 }
 
 #section-2 h3 {
-    color: #fff;
+    color: #181818;
     font-size: 1em;
     font-weight: 300;
     position: relative;
@@ -213,5 +213,5 @@ header ul li a.active {
  * --------------------------------------- */
 
  #section-3 {
-     background: #718C49 !important;
+     background: linear-gradient(#d8d6db, rgb(196, 193, 199)) !important;
  }

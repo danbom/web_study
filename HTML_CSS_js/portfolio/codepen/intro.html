@@ -13,7 +13,7 @@
 <body>
 
     <div id="app">
-        <header>
+        <header id="header">
             <nav>
                 <ul>
                     <li><a href="intro.html" class="active">INTRO</a></li>
@@ -61,7 +61,7 @@
 
 
             <div class="section" id="section-3">
-                <h3>Section 3</h3>
+                
             </div>
 
 
@@ -70,7 +70,23 @@
 
     </div>
 
+    <script src="anime.min.js"></script>
+    <script>
+        var animation = anime.timeline({
+            autoplay: false
+        });
 
+        animation
+        .add({
+            targets: '#header',
+            top: '100px',
+            duration: 500,
+            easing: 'easeInOutSine'
+        })
+
+        document.querySelector('#header').onclick = animation.play;
+    </script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
     <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.js"></script>
     <script src="../codepen/main.js"></script>
