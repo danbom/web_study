@@ -13,10 +13,10 @@
 <body>
 
     <div id="app">
-        <header id="header">
+        <header class="header">
             <nav>
-                <ul>
-                    <li><a href="intro.html" class="active">INTRO</a></li>
+                <ul id="header">
+                    <li><a href="intro.html" class="active" >INTRO</a></li>
                     <li><a href="skills.html">SKILLS</a></li>
                     <li><a href="works.html">WORKS</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
@@ -24,13 +24,79 @@
             </nav>
             
           </header>
+          <section class="banner">
+            <div class="container">
+              <div class="dark-light">
+                <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                </svg>
+            </div>
+              
+              <div id="scene">
+                <!-- <h2 id = "text1">
+                  <span data-depth-y="1">I</span>
+                  <span data-depth-y="-2">'</span>
+                  <span data-depth-y="2">m</span>
+                </h2> -->
+                <h2 id= "text2">
+                  <span data-depth-y="1">S</span>
+                  <span data-depth-y="-2">u</span>
+                  <span data-depth-y="2">p</span>
+                  <span data-depth-y="-1">p</span>
+                  <span data-depth-y="2">o</span>
+                  <span data-depth-y="-1">r</span>
+                  <span data-depth-y="1">t</span>
+                  <span data-depth-y="-2">e</span>
+                  <span data-depth-y="2">r</span>
+                </h2>
+                <div class="layer" data-depth="-0.8">
+                  <img src="../icon/lulu.png" />
+                </div>
+                <div class="layer" data-depth="0.75">
+                  <img src="../icon/Alistar.jpg.png" />
+                </div>
+                <!-- <div class="layer" data-depth="0.75">
+                  <img src="../icon/CSS.png" />
+                </div>
+                <div class="layer" data-depth="1">
+                  <img src="../icon/game.png" />
+                </div>
+                <div class="layer" data-depth="-0.65">
+                  <img src="../icon/HTML.png" />
+                </div>
+                <div class="layer" data-depth="0.625">
+                  <img src="../icon/react.png" />
+                </div>
+                <div class="layer" data-depth="-0.775">
+                  <img src="../icon/Python.png" />
+                </div> -->
+              </div>
+            </div>
+          </section>
+          
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+      
+      
+          <script>
+            // var text1 = document.getElementById("text1");
+            var text2 = document.getElementById("text2");
+            var scene = document.getElementById("scene");
+            // var parallaxInstance = new Parallax(text1);
+            var parallaxInstance = new Parallax(text2);
+            var parallaxInstance = new Parallax(scene);
+          </script>
+
+
         <full-page :options="options" id="fullpage" ref="fullpage">
             
             <div class="section" id="section-1">
-                <h2>HI THERE! 👋 &nbsp;I'M </h2>
+                <h2 class="t1">HI THERE! 👋 &nbsp;I'M </h2>
                 <h1>EUNYOUNG.</h1>
                 <h2>FRONT-END DEVELOPER <br> 
                     + want to be UX/UI DESIGNER </h2>
+
+                    
                 
             </div>
 
@@ -70,11 +136,20 @@
 
     </div>
 
+    
+
+
+    <script>
+      // var text1 = document.getElementById("text1");
+      var text2 = document.getElementById("text2");
+      // var parallaxInstance = new Parallax(text1);
+      var parallaxInstance = new Parallax(text2);
+    </script>
+
+
     <script src="anime.min.js"></script>
     <script>
-        var animation = anime.timeline({
-            autoplay: false
-        });
+        var animation = anime.timeline({});
 
         animation
         .add({
@@ -84,12 +159,21 @@
             easing: 'easeInOutSine'
         })
 
-        document.querySelector('#header').onclick = animation.play;
+        animation
+        .add({
+            targets: '#t1',
+            top: '100px',
+            duration: 500,
+            easing: 'easeInOutSine'
+        })
+
     </script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script> 얘 때문에 PARALLAX가 안먹는데.. -->
     <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.js"></script>
-    <script src="../codepen/main.js"></script>
+    <script src="../codepen/main.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
 </body>
 
 </html>
