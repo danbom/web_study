@@ -66,6 +66,15 @@ body {
     /* text-align: center; */
 }
 
+.gotop {
+    position: fixed;
+    bottom: 5vh;
+    right: 4vw;
+    z-index: 10;
+    font-size: 20px;
+    color: rgb(32, 32, 32);
+}
+
 /* Header
  * --------------------------------------- */
 
