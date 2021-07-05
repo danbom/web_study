@@ -5,8 +5,8 @@ new Vue({
             options: {
                 afterLoad: this.afterLoad,
                 navigation: true,
-                anchors: ['page1', 'page2', 'page3','page4', 'page5', 'page6'],
-                sectionsColor: ['#F2C063', '#131313', '#131313', '#131313', '#131313', '#131313', '#222', '#222', '#222']
+                anchors: ['page1', 'page2', 'page3','page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10'],
+                sectionsColor: ['#e8e6ec', '#e8e6ec', '#e8e6ec', '#e8e6ec', '#e8e6ec', '#e8e6ec', '#e8e6ec', '#e8e6ec', '#e8e6ec']
             },
         }
     },

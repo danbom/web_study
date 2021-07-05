@@ -4,6 +4,7 @@
 
 * {
     font-family: 'Encode Sans SC', sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* Reset CSS
@@ -99,12 +100,16 @@ header ul li a {
   color: rgb(26, 26, 26);
 }
 
-header ul li a:hover,
-header ul li a.active {
+header ul li a:hover {
   /* 사용자의 커서가 요소에 올라가 있을 때 적용 */
   /* 첫화면은 home이 active한 상태, 나머지는 내가 알아서.. */
   text-decoration: #fff wavy underline;
   font-weight: 600;
+}
+
+
+.section {
+    transition: all 0.3s ease-in-out;
 }
 
 /* Section-1
@@ -149,7 +154,6 @@ header ul li a.active {
  * --------------------------------------- */
 
 #section-2 {
-    background: linear-gradient(#e8e6ec, #d8d6db) !important;
     display: flex;
 }
 
@@ -212,127 +216,151 @@ header ul li a.active {
 /* Section-3
  * --------------------------------------- */
 
- #section-3 {
-     background: linear-gradient(#d8d6db, rgb(196, 193, 199)) !important;
- }
 
 
 
 
-/* 지울거 */
-/* <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap" rel="stylesheet"> */
+/* Section-4
+ * --------------------------------------- */
 
-@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Maven Pro", sans-serif;
+.nav-alert {
+    font-size: 0.85rem;
+    display: none;
+    position: absolute;
+    top: 10vh;
+    left: 8vw;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.473);
+    /* 가로 -> 세로 */
+    z-index: 10;
+    border-radius: 14px;
 }
 
-.banner {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+.navigation {
+    position: absolute;
+    top: 12vh;
+    left: 8vw;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    transition: width 0.5s, height 0.5s;
+    transition-delay: 0s, 0.75s;  
+    /* 가로 -> 세로 */
+    z-index: 10;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-.container {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background: no-repeat center url("../icon/ionia.png");
-  background-size: cover;
-  /* transition: all ease 2s 0s; */
+.navigation.active {
+    width: 250px;
+    height: 300px;
+    transition: height 0.5s, width 0.5s;
+    transition-delay: 0s, 0.75s;  
+    /* 세로 -> 가로 */
 }
 
-.dark-mode .container {
-  background: no-repeat center url("../icon/군도'.jpg");  
-  /* transition: all ease 2s 0s; */
+.navigation .toggle {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #7940ff;
+    transition: 0,5s;
+    cursor: pointer;
 }
 
-.dark-mode .container #scene #text2 {
-  position: absolute;
-  display: flex !important;
-  position: relative;
-  color: #083a3a;
-  font-size: 8vw;
-  letter-spacing: -0.5vw;
-  z-index: 100;
-  transition: 0.25s;
+.navigation .toggle.active {
+    background: #ec4e4e;
 }
 
-.dark-mode .container #scene #text2 span {
-  position: relative !important;
-  display: inline-block;
-  text-shadow: 0 0 18px #fff;
+.navigation .toggle::before {
+    content: "+";
+    position: absolute;
+    font-size: 2em;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    transition: 0.5s;
 }
 
-.dark-light {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  margin-left: auto;
-  flex-shrink: 0;
-  position: absolute;
-  right: 1.5vw;
-  top: 3vh;
-  width: 1.5vw;
-  /* height: 22px; */
-  color: #fff;
-  flex-shrink: 0;
-  
-}
-.dark-light svg {
-  width: 100%;
-  fill: transparent;
-  transition: 0.5s;
-  
+.navigation .toggle::before:hover {
+    content: "+aewf";
+    position: absolute;
+    font-size: 2em;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    transition: 0.5s;
 }
 
-.dark-mode .dark-light svg {
-  width: 100%;
-  fill: #fff;
-  transition: 0.5s; 
+.navigation .toggle.active::before {
+    transform: rotate(315deg);
 }
 
-.dark-mode .banner .container .layer img {
-  -webkit-filter : grayscale(100%);
-  filter: gray;
-  transition: 0.5s;
-}
-
-.banner .container .layer img {
-  -webkit-filter : grayscale(0%);
-  filter: none;
-  transition: 0.5s;
-}
-
-.container #scene {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+.navigation ul {
+    position: absolute;
+    left: 0;
+    width: 100%;
 }
 
 
-#scene #text2 {
-  position: absolute;
-  display: flex !important;
-  position: relative;
-  color: #fff;
-  font-size: 8vw;
-  letter-spacing: -0.5vw;
-  z-index: 100;
-  transition: 0.25s;
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
 }
 
-#scene #text2 span {
-  position: relative !important;
-  display: inline-block;
-  text-shadow: 1px 1px 0 #ffffff27, 2px 2px 0 #ffffff27, 3px 3px 0 #ffffff27,
-    4px 4px 0 #ffffff27, 5px 5px 0 #ffffff27, 6px 6px 0 #ffffff27,
-    7px 7px 0 #ffffff27, 8px 8px 0 #ffffff27, 25px 35px 0 rgba(0, 0, 0, 0.274);
+.navigation ul li:hover {
+    background-color: #00000010;
 }
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #333;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.navigation ul li a .icon .fa {
+    font-size: 16px;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    text-align: start;
+    line-height: 50px;
+    white-space: nowrap;
+}
+
+.navigation ul li:hover a .icon .fa,
+.navigation ul li:hover a .title {
+    color:#333;
+} 

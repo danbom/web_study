@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <header class="header" id="header">
+            <nav>
+                <ul>
+                    <li><a href="#page1">INTRO</a></li>
+                    <li><a href="#page3">SKILLS</a></li>
+                    <li><a href="#page4">WORKS</a></li>
+                    <li><a href="#page5">CONTACT</a></li>
+                  </ul>
+            </nav>
+            
+          </header>
+
+        <full-page :options="options" id="fullpage" ref="fullpage">
+            
+            <div class="section" id="section-1">
+                <h2 class="t1">HI THERE! 👋 &nbsp;I'M </h2>
+                <h1>EUNYOUNG.</h1>
+                <h2>FRONT-END DEVELOPER <br> 
+                    + want to be UX/UI DESIGNER </h2>
+
+                    
+                
+            </div>
+
+
+            <div class="section" id="section-2">
+                <div class="mini-text-zone">
+                    <div class="mini-text">
+                        ONE-LINE <br> SELF INTRODUCTION
+                    </div>
+                </div>
+                
+                <div class="text-zone">
+                    <div class="big-text">
+                        <h2>I am a student at Ewha Womans University and studying with interest in the Front-end
+                        </h2>
+                    </div>
+                    <div class="small-text">
+                        <h3>
+                            I majored in computer engineering and studied various things in the front end and back end, and I studied deeply with more interest in the front end while working on personal and team projects.
+                            </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="section-3">
+
+                <div class="recent-work-zone">
+                    <div class="recent-work-text">
+                        <span class="recent-work-text-small">RECENT WORK</span>
+                        <span class="recent-work-text-big">HUMAN-COMPUTER INTERACTIVE PROJECT</span> 
+                    </div>
+                </div>
+
+                <div class="recent-work-img"></div>
+                
+
+            </div>
+
+            <div class="section" id="section-4">
+                <div class="skills-zone">
+                    <div class="nav-alert">
+                        <span>double click this!</span>
+                    </div>
+                    <div class="navigation">
+                        <div class="toggle">
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa fa-paw" aria-hidden="true"></i></span>
+                                    <span class="title">Well-bing pet</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                    <span class="title">Rodang</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa fa-film" aria-hidden="true"></i></span>
+                                    <span class="title">Sonemary</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa fa-music" aria-hidden="true"></i></span>
+                                    <span class="title">AIrang</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>
+                                    <span class="title">Gongdal</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="section" id="section-5">
+                <div class="my-works"></div>
+            </div>
+
+
+
+
+        </full-page>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script> 
+    <!-- 얘 때문에 PARALLAX가 안먹는데.. -->
+    <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.js"></script>
+    <script src="../codepen/main.js"></script> 
+
+    <script>
+        const navigation = document.querySelector('.navigation');
+        const navalert = document.querySelector('.nav-alert');
+        const toggle = document.querySelector(".toggle");
+
+        document.querySelector('.toggle').onmouseover = function() {
+            navalert.style.display="block";
+            var toggleTop = toggle.getBoundingClientRect().top;
+            navalert.style.top = toggleTop - 40 + "px";
+            var toggleLeft = toggle.getBoundingClientRect().left;
+            navalert.style.left = toggleLeft + "px";
+        }
+
+        document.querySelector('.toggle').onmousedown = function() {
+            navalert.style.display="none";
+        }
+
+        document.querySelector('.toggle').onmouseout = function() {
+            navalert.style.display="none";
+        }
+
+        document.querySelector('.toggle').ondblclick = function() {
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+    $( ".navigation" ).draggable();
+    } );
+    </script>
+
+</body>
+
+</html>
