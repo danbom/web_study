@@ -448,28 +448,6 @@ header ul li a:hover {
     margin: 0 7px;
 }
 
-/* .img-zone {
-    display: flex;
-    padding-top: 18vh;
-    padding-left: 18vw;
-    padding-right: 18vw;
-}
-
-.left-img-zone {
-    width: 50vw;
-    overflow: hidden;
-}
-
-.left-img-zone img {
-    width: 56%;
-    cursor: pointer;
-}
-
-.right-img-zone {
-    width: 50vw;
-    overflow: hidden;
-} */
-
 .rodang-img-zone {
     display: block;
     width: 100vw;
@@ -485,4 +463,51 @@ header ul li a:hover {
     width: 4%;
     padding-top: 20px;
     padding-bottom: 35px;
+}
+
+.sonemary-img-zone {
+    display: flex;
+    padding-top: 15vh;
+    padding-left: 14vw;
+    padding-right: 14vw;
+}
+
+.sonemary-left-img-zone {
+    width: 50vw;
+    overflow: hidden;
+}
+
+.sonemary-left-img-zone img {
+    width: 92%;
+    border-radius: 15px;
+}
+
+.sonemary-right-img-zone {
+    width: 50vw;
+    text-align: left;
+}
+
+.sonemary-right-img-zone span {
+    padding-left: 20px;
+    /* font-family: Yomogi; */
+    font-weight: 500;
+}
+
+.sonemary-right-img-zone span i{
+    padding-right: 13px;
+    font-size: 0.88em;
+}
+
+.sonemary-right-img-zone-grid {
+    padding-top: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.sonemary-right-img-zone img {
+    width: 100%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
 }
