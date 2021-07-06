@@ -26,10 +26,14 @@
                 <header class="header" id="header">
                     <nav>
                         <ul>
-                            <li><a href="#page1">INTRO</a></li>
-                            <li><a href="#page3">SKILLS</a></li>
-                            <li><a href="#page4">WORKS</a></li>
-                            <li><a href="#page5">CONTACT</a></li>
+                            <li class="header-item1"><a href="#page1">Intro<div class="underline 1" id="underline1"></div></a>
+                                
+                            </li>
+                            <li class="header-item2"><a href="#page3">Skills<div class="underline 2" id="underline2"></div></a>
+                                </li>
+                            <li class="header-item3"><a href="#page4">Works<div class="underline 3" id="underline3"></div></a></li>
+                            <li class="header-item4"><a href="#page5">Contact<div class="underline 4" id="underline4"></div></a>
+                            </li>
                           </ul>
                     </nav>
                     
@@ -37,7 +41,7 @@
                 <h2 class="t1">HI THERE! 👋 &nbsp;I'M </h2>
                 <h1>EUNYOUNG.</h1>
                 <h2>FRONT-END DEVELOPER <br> 
-                    + want to be UX/UI DESIGNER </h2>
+                    also want to be UX/UI DESIGNER </h2>
 
                     
                 
@@ -281,6 +285,51 @@
         const navigation = document.querySelector('.navigation');
         const navalert = document.querySelector('.nav-alert');
         const toggle = document.querySelector(".toggle");
+
+        var underline1 = document.getElementById("underline1");
+        var underline2 = document.getElementById("underline2");
+        var underline3 = document.getElementById("underline3");
+        var underline4 = document.getElementById("underline4");
+
+        document.querySelector('.header-item1').onmouseover = function() {
+            underline1.style.transform = "translateY(15px)";
+            underline1.style.background = "#3d348b";
+        }
+
+        document.querySelector('.header-item1').onmouseout = function() {
+            underline1.style.transform = "translateY(0px)";
+            underline1.style.background = "#88888820";
+        }
+
+        document.querySelector('.header-item2').onmouseover = function() {
+            underline2.style.transform = "translateY(15px)";
+            underline2.style.background = "#7678ed";
+        }
+
+        document.querySelector('.header-item2').onmouseout = function() {
+            underline2.style.transform = "translateY(0px)";
+            underline2.style.background = "#88888820";
+        }
+
+        document.querySelector('.header-item3').onmouseover = function() {
+            underline3.style.transform = "translateY(15px)";
+            underline3.style.background = "#f7b801";
+        }
+
+        document.querySelector('.header-item3').onmouseout = function() {
+            underline3.style.transform = "translateY(0px)";
+            underline3.style.background = "#88888820";
+        }
+
+        document.querySelector('.header-item4').onmouseover = function() {
+            underline4.style.transform = "translateY(15px)";
+            underline4.style.background = "#f18701";
+        }
+
+        document.querySelector('.header-item4').onmouseout = function() {
+            underline4.style.transform = "translateY(0px)";
+            underline4.style.background = "#88888820";
+        }
 
         document.querySelector('.toggle').onmouseover = function() {
             navalert.style.display="block";

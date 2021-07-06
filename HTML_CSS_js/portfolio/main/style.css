@@ -104,7 +104,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 5vh;
+  padding: 7vh;
   display: inline-block;
   justify-content: space-between; /* 로고와 리스트 중간에 space 삽입 */
   align-items: center; /* 높이 가운데로 정렬 */
@@ -121,6 +121,7 @@ header ul {
 header ul li {
   list-style: none; /* 못생긴 리스트의 점들 없애줌 */
   margin-left: 20px; /* 리스트의 각 요소들 왼쪽 간격 20px씩 둔다 */
+  transition: all 0.3s ease-in-out;
 }
 
 header ul li a {
@@ -128,13 +129,37 @@ header ul li a {
   text-decoration: none;
   padding: 6px 15px;
   color: rgb(26, 26, 26);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-header ul li a:hover {
-  /* 사용자의 커서가 요소에 올라가 있을 때 적용 */
-  /* 첫화면은 home이 active한 상태, 나머지는 내가 알아서.. */
-  text-decoration: #fff wavy underline;
-  font-weight: 600;
+header ul li div {
+    position: absolute;
+    z-index: -1;
+    margin-top: 8px;
+    width: 50px;
+    height: 8px;
+    border-radius: 6px 0 6px 0 ;
+    background-color: #88888820;
+    transition: all 0.22s ease-in-out;
+}
+
+header ul .header-item1 a:hover {
+    color: #3d348b;
+}
+
+header ul .header-item2 a:hover {
+    color: #7678ed;
+}
+
+header ul .header-item3 a:hover {
+    color: #f7b801;
+}
+
+header ul .header-item4 a:hover {
+    color: #f18701;
 }
 
 
@@ -278,8 +303,8 @@ header ul li a:hover {
     position: absolute;
     top: 12vh;
     left: 8vw;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: #fff;
     transition: width 0.5s, height 0.5s;
     transition-delay: 0s, 0.75s;  
@@ -290,8 +315,8 @@ header ul li a:hover {
 }
 
 .navigation.active {
-    width: 250px;
-    height: 300px;
+    width: 230px;
+    height: 290px;
     transition: height 0.5s, width 0.5s;
     transition-delay: 0s, 0.75s;  
     /* 세로 -> 가로 */
@@ -302,7 +327,7 @@ header ul li a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 40px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -323,8 +348,8 @@ header ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     color: #fff;
     transition: 0.5s;
 }
