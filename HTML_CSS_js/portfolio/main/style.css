@@ -530,7 +530,7 @@ header ul .header-item4 a:hover {
 }
 
 .rodang-img-zone img {
-    width: 47%;
+    width: 45%;
 }
 
 .sonemary-img-zone {
@@ -581,16 +581,28 @@ header ul .header-item4 a:hover {
 }
 
 .gongdal-img-zone {
+    padding-top: 17vh;
     display: flex;
     justify-content:center;
     align-items:center;
 }
 
-.gongdal-img-zone img {
-    width: 30%;
+
+.gongdal-img-zone .gongdal-hover-zone {
+    width: 49vw;
+    height: 43vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
 }
 
-.gongdal-img-zone .small {
-    width: 20%;
-    height: 20%;
+.gongdal-img-zone img {
+    width: 100%;
+}
+
+.gongdal-img-zone gongdal-hover-zone:hover {
+    z-index: 2;
+    background-color: #33333360;
 }
