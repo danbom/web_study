@@ -14,6 +14,15 @@ new Vue({
         afterLoad: function(origin, destination, direction){
             console.log("After load....");
             console.log(destination);
+
+            const gotop = document.querySelector('.gotop');
+            // console.log(window.location.hash);
+            if (window.location.hash == '#page1'){
+                gotop.style.opacity=0;
+            }
+            else {
+                gotop.style.opacity=1;
+            }       
         },
         addSection: function(e) {
             var newSectionNumber = document.querySelectorAll('.fp-section').length + 1
