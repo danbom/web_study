@@ -497,36 +497,29 @@ header ul .header-item4 a:hover {
 .well-bing-svg-zone {
     position: absolute;
     width: 100vw;
-    top: 15vh;
+    top: 7vh;
     padding-top: 17vh;
     padding-bottom: 5vh;
 }
 
 .well-bing-svg-zone img {
-    width: 19%;
+    width: 5%;
     padding-top: 10vh;
 }
 
 .well-bing-img-zone {
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 100vw;
-    top: 47vh;
-}
-
-.well-bing-img-zone-left {
-    padding-left: 9vw;
-    width: 50vw;
-}
-
-.well-bing-img-zone-right {
-    padding-right: 9vw;
-    width: 50vw;
+    top: 38vh;
 }
 
 .well-bing-img-zone img {
-    width: 15%;
+    width: 13%;
     margin: 0 7px;
+    border-radius: 10px;
 }
 
 .rodang-img-zone {
