@@ -71,7 +71,7 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50px;
-    background: #7940ff;
+    background: #7678ed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,7 +86,7 @@ body {
 
 .gotop:hover{
     box-shadow: 0 0 10px 1px #ff840081;
-    background: #ff9100;
+    background: #f18701;
     color: #e8e6ec;
     transform: translateY(-10px);
 }
@@ -331,7 +331,7 @@ header ul .header-item4 a:hover {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: #7940ff;
+    background-color: #333;
     transition: 0,5s;
     cursor: pointer;
 }
@@ -537,13 +537,7 @@ header ul .header-item4 a:hover {
 }
 
 .rodang-img-zone img {
-    width: 10%;
-}
-
-.rodang-img-zone .svg {
-    width: 4%;
-    padding-top: 20px;
-    padding-bottom: 35px;
+    width: 47%;
 }
 
 .sonemary-img-zone {
