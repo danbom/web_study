@@ -430,6 +430,208 @@ header ul .header-item4 a:hover {
     text-align: center;
 }
 
+.works-popup {
+    position: absolute;
+    /* left: 0;
+    top: 0; */
+    width: 100vw;
+    height: 815px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(51, 51, 51, 0.342); */
+}
+
+.works-popup .popup-zone1  {
+    position: absolute;
+    bottom: 95px;
+    transition: all 0.1s linear;
+    visibility: hidden;
+    font-size: 0.8rem;
+    z-index: 2;
+    padding: 15px 20px;
+    background-color: transparent;
+    color: #222;
+    font-weight: 500;
+}
+
+.works-popup .popup-zone1.active {
+    position: absolute;
+    transition: all 0.4s ease-out;
+    visibility: visible;
+    font-size: 0.8rem;
+    z-index: 2;
+    padding: 15px 20px;
+    background-color: transparent;
+    color: #222;
+    font-weight: 500;
+    transform: translateY(55px);
+}
+
+.works-popup .popup-zone1 ul {
+    display: flex;
+}
+
+.works-popup .popup-zone1 ul i {
+    font-size: 20px;
+}
+
+.works-popup .popup-zone1 ul .li {
+    padding: 0 10px;
+}
+
+.works-popup .popup-zone2  {
+    position: absolute;
+    bottom: 80px;
+    transition: all 0.1s linear;
+    visibility: hidden;
+    font-size: 0.8rem;
+    z-index: 2;
+    padding: 15px 20px;
+    background-color: transparent;
+    color: #222;
+    font-weight: 500;
+}
+
+.works-popup .popup-zone2.active {
+    position: absolute;
+    transition: all 0.4s ease-out;
+    visibility: visible;
+    font-size: 0.8rem;
+    z-index: 2;
+    padding: 15px 20px;
+    background-color: transparent;
+    color: #222;
+    font-weight: 500;
+    transform: translateY(55px);
+}
+
+.works-popup .popup-zone2 ul {
+    display: flex;
+}
+
+.works-popup .popup-zone2 ul i {
+    font-size: 20px;
+}
+
+.works-popup .popup-zone2 ul .li {
+    padding: 0 10px;
+}
+
+.works-popup .popup-zone3  {
+    position: absolute;
+    bottom: 240px;
+    transition: all 0.1s linear;
+    visibility: hidden;
+    font-size: 0.8rem;
+    z-index: 2;
+    padding: 15px 20px;
+    background-color: transparent;
+    color: #222;
+    font-weight: 500;
+}
+
+.works-popup .popup-zone3.active {
+    position: absolute;
+    transition: all 0.4s ease-out;
+    visibility: visible;
+    font-size: 0.8rem;
+    z-index: 2;
+    padding: 15px 20px;
+    background-color: transparent;
+    color: #222;
+    font-weight: 500;
+    transform: translateY(55px);
+}
+
+.works-popup .popup-zone3 ul {
+    display: flex;
+}
+
+.works-popup .popup-zone3 ul i {
+    font-size: 20px;
+}
+
+.works-popup .popup-zone3 ul .li {
+    padding: 0 10px;
+}
+
+.works-popup .popup-zone4  {
+    position: absolute;
+    bottom: 215px;
+    transition: all 0.1s linear;
+    visibility: hidden;
+    font-size: 0.8rem;
+    z-index: 2;
+    padding: 15px 20px;
+    background-color: transparent;
+    color: #222;
+    font-weight: 500;
+}
+
+.works-popup .popup-zone4.active {
+    position: absolute;
+    transition: all 0.4s ease-out;
+    visibility: visible;
+    font-size: 0.8rem;
+    z-index: 2;
+    padding: 15px 20px;
+    background-color: transparent;
+    color: #222;
+    font-weight: 500;
+    transform: translateY(55px);
+}
+
+.works-popup .popup-zone4 ul {
+    display: flex;
+}
+
+.works-popup .popup-zone4 ul i {
+    font-size: 20px;
+}
+
+.works-popup .popup-zone4 ul .li {
+    padding: 0 10px;
+}
+
+.works-popup .popup-zone5  {
+    position: absolute;
+    bottom: 435px;
+    transition: all 0.1s linear;
+    visibility: hidden;
+    font-size: 0.8rem;
+    z-index: 2;
+    padding: 15px 20px;
+    background-color: transparent;
+    color: #222;
+    font-weight: 500;
+}
+
+.works-popup .popup-zone5.active {
+    position: absolute;
+    transition: all 0.4s ease-out;
+    visibility: visible;
+    font-size: 0.8rem;
+    z-index: 2;
+    padding: 15px 20px;
+    background-color: transparent;
+    color: #222;
+    font-weight: 500;
+    transform: translateY(55px);
+}
+
+.works-popup .popup-zone5 ul {
+    display: flex;
+}
+
+.works-popup .popup-zone5 ul i {
+    font-size: 20px;
+}
+
+.works-popup .popup-zone5 ul .li {
+    padding: 0 10px;
+}
+
 .works-title {
     position: absolute;
     top: 20vh;
@@ -597,4 +799,21 @@ header ul .header-item4 a:hover {
 
 .gongdal-img-zone img {
     width: 100%;
+}
+
+.airang-zone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.airang-img-zone {
+    width: 1000px;
+    /* overflow: hidden; */
+}
+
+.airang-img-zone img {
+    width: 85%;
+    /* transform: rotate(-10deg); */
 }
