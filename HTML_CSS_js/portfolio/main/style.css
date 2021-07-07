@@ -494,6 +494,7 @@ header ul .header-item4 a:hover {
     padding-right: 10px;
 }
 
+/* 
 .well-bing-svg-zone {
     position: absolute;
     width: 100vw;
@@ -505,7 +506,7 @@ header ul .header-item4 a:hover {
 .well-bing-svg-zone img {
     width: 5%;
     padding-top: 10vh;
-}
+} */
 
 .well-bing-img-zone {
     display: flex;
@@ -513,12 +514,12 @@ header ul .header-item4 a:hover {
     align-items: center;
     position: absolute;
     width: 100vw;
-    top: 38vh;
+
 }
 
 .well-bing-img-zone img {
-    width: 13%;
-    margin: 0 7px;
+    width: 10%;
+    margin: -100px 7px;
     border-radius: 10px;
 }
 
@@ -535,13 +536,15 @@ header ul .header-item4 a:hover {
 
 .sonemary-img-zone {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 15vh;
     padding-left: 14vw;
     padding-right: 14vw;
 }
 
 .sonemary-left-img-zone {
-    width: 50vw;
+    width: 45vw;
     overflow: hidden;
 }
 
@@ -550,7 +553,7 @@ header ul .header-item4 a:hover {
     border-radius: 15px;
 }
 
-.sonemary-right-img-zone {
+/* .sonemary-right-img-zone {
     width: 50vw;
     text-align: left;
 }
@@ -578,7 +581,7 @@ header ul .header-item4 a:hover {
     padding-left: 10px;
     padding-bottom: 10px;
     border-radius: 10px;
-}
+} */
 
 .gongdal-img-zone {
     margin-top: 30vh;
