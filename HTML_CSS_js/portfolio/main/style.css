@@ -1,6 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100;200;300;400;500;600;700;800;900&family=Yomogi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 * {
     font-family: 'Encode Sans SC', sans-serif;
@@ -272,55 +272,138 @@ header ul .header-item4 a:hover {
 
 .recent-work-text {
     position: absolute;
-    left: 10vw;
-    top: 21vh;
+    left: 13vw;
+    top: 30vh;
     /* width: 100vw; */
 }
 
 .recent-work-text-small {
     position: absolute;
     width: 20vw;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
 }
 
 .recent-work-text-big {
     position: absolute;
     top: 1rem;
     width: 30vw;
-    font-size: 1.5rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
 }
 
 .recent-work-desc {
     position: absolute;
-    left: 10vw;
-    top: 35vh;
+    left: 13vw;
+    top: 40vh;
     width: 30vw;
 }
 
+.sub-desc {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding-bottom: 0.4rem;
+}
+
+.sub-desc span {
+    padding-left: 0.3rem;
+    font-size: 1rem;
+}
+
 .main-desc{
-    font-size: 3rem;
+    
+    font-size: 3.5rem;
     font-weight: 800;
 }
 
 .long-desc {
-    max-width: 30vw;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    line-height: 1.3rem;
+    max-width: 100%;
 }
 
 .recent-work-img-zone {
+    transition: all 0.2s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 22vh;
-    left: 44vw;
+    top: 26vh;
+    left: 50vw;
 }
 
 .recent-work-img-zone .circle {
+    transition: all 0.2s ease-out;
     position: absolute;
-    width: 400px;
-    height: 400px;
-    background-color: #ec4e4e;
+    top: 4vh;
+    left: 11vw;
+    width: 420px;
+    height: 420px;
+    border-radius: 420px;
+    background-color: #7678ed;
+    z-index: 1;
+}
+
+.recent-work-img-zone .circle.active {
+    transition: all 0.5s ease-out;
+    width: 550px;
+    height: 460px;
+    transform: translateX(-110px);
+    background-color: #f7ba01b2;
+    border-radius: 10px;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recent-work-img-zone .circle-text {
+    color: transparent;
+    font-size: 0rem;
+    visibility: hidden;
+    padding-top: 800px;
+}
+
+.recent-work-img-zone .circle-text.active {
+    transition: all 0.5s ease;
+    transition-delay: 0.1s;
+    visibility: visible;
+    z-index: 4;
+    color: #fff;
+    font-size: 1.7rem;
+    transform: translateY(-400px);
+}
+
+.recent-work-img-zone .circle-text i {
+    padding-left: 0.3rem;
 }
 
 .recent-work-img-zone img {
-    width: 80%;
+    position: absolute;
+    width: 696px;
 }
+
+.recent-work-img-zone .laptop {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    width: 696px;
+}
+
+.recent-work-img-zone .laptop.active {
+    transition: all 0.5s ease-in-out;
+    opacity: 0.5;
+}
+
+.recent-work-img-zone .recent-work-img {
+    position: absolute;
+    z-index: 2;
+}
+
 
 /* Section-4
  * --------------------------------------- */

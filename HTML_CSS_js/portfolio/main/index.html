@@ -76,14 +76,21 @@
                         <div class="recent-work-text-big">HUMAN-COMPUTER INTERACTIVE PROJECT</div> 
                     </div>
                     <div class="recent-work-desc">
-                        <div class="sub-desc">Contest management web project</div>
                         <div class="main-desc">Gongdal</div>
-                        <div class="long-desc">Gongdal is a service for time management of contests and contests. Gongdal not only helps users manage their time efficiently by marking contests and competitions as calendars, but also helps users manage their portfolios by collecting awards. Team number 11 consists of team member Min Eunyoung Kim Sunwoo Kim Hyunjin Ohjoo.</div>
+                        <div class="sub-desc">Contest management web project<span>💡</span></div>
+                        
+                        <div class="long-desc">Gongdal is a service for time management of contests and contests. Gongdal not only helps users manage their time efficiently by marking contests and competitions as calendars, but also helps users manage their portfolios by collecting awards. Team number 11 consists of team member Min Eunyoung Kim Sunwoo Kim Hyunjin Ohjoo. On the first page of gongdal,
+                            users can search for contests.
+                            And users can see popular contests and check their D-DAY easily.
+                            Likewise, they can see recently posted contests.
+                            
+                        </div>
                     </div>
                     <div class="recent-work-img-zone">
-                        <div class="circle"></div>
+                        <div class="circle"><div class="circle-text">Go to website <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> </div></div>
+                        
                         <div class="recent-work-img">
-                            <img src="image/공달노트북.png">
+                            <img class="laptop" src="image/공달노트북.png">
                         </div>
                     </div>
                 </div>
@@ -402,6 +409,8 @@
         const popup3 = document.querySelector(".popup-zone3");
         const popup4 = document.querySelector(".popup-zone4");
         const popup5 = document.querySelector(".popup-zone5");
+        const circle = document.querySelector(".circle");
+        const circletext = document.querySelector(".circle-text");
 
         var underline1 = document.getElementById("underline1");
         var underline2 = document.getElementById("underline2");
@@ -426,6 +435,12 @@
 
         document.querySelector(".works-detail-btn5").onclick = function() {
             popup5.classList.toggle('active');
+        }
+
+        document.querySelector('.laptop').onmouseover = function() {
+            this.classList.toggle('active');
+            circle.classList.toggle('active');
+            circletext.classList.toggle('active');
         }
 
         document.querySelector('.header-item1').onmouseover = function() {
