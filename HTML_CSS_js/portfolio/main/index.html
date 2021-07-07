@@ -70,22 +70,29 @@
 
 
             <div class="section" id="section-2">
+                <div class="cursor"></div>
+
+                <div class="bigwave-zone">
+                    <div class="bigwave1"></div>
+                    <div class="bigwave2"></div>
+                    <div class="bigwave3"></div>
+                  </div>
                 <div class="mini-text-zone">
                     <div class="mini-text">
-                        ONE-LINE <br> SELF INTRODUCTION
+                        SELF INTRODUCTION
                     </div>
                 </div>
                 
                 <div class="text-zone">
                     <div class="big-text">
-                        <h2>I am a student at Ewha Womans University and studying with interest in the Front-end
-                        </h2>
+                        안녕하세요 <br>민은영입니다
                     </div>
                     <div class="small-text">
-                        <h3>
-                            I majored in computer engineering and studied various things in the front end and back end, and I studied deeply with more interest in the front end while working on personal and team projects.
-                            </h3>
+                        저는 프론트엔드 개발자가 되고 싶은 이화여자대학교 컴퓨터공학 학부생이자, 게임 하기를 사랑하는 23살 민 은영입니다. <br><br> 물론 게임하는 것을 좋아한다고 게임 개발에 관심이 있는 것은 아닙니다. 1학년 때 게임 개발 동아리에서 유니티를 체험해본 적 있지만,<br> 오픈소프트웨어 플랫폼이란 강의를 듣고 HTML, CSS 에 빠져 프론트엔드 개발의 길을 걷게 되었습니다.<br> 최근엔 게임보다 JS 공부하는 것에 맛들려 학기 중 보다 더 열심히 공부 중입니다!<br> HTML, CSS, JS 를 제외하고도 React 개발 경험 또한 존재하고 앞으로 공부할 예정입니다. <br><br> 마지막으로 집에 있는 것을 좋아하지만 불러주면 재밌게 놀 수 있는 INFP 이고, 검은 고양이 오디를 기르고 있습니다. <br>오디는 지금 마우스를 따라다니고 있는 귀여운 고양이입니다! :)
                     </div>
+                </div>
+                <div class="odi-zone" id="odi">
+                    <img src="image/오디전신.png">
                 </div>
             </div>
 
@@ -363,7 +370,7 @@
                         </div>
                     </div>
                     <div class="slide" id="slide5">
-                        <div class="works-popup">
+                        <div class="works-popup5">
                             <div class="popup-zone5">
                                 <ul>
                                     <li>
@@ -426,6 +433,34 @@
     <script src="../main/main.js"></script> 
 
     <script>
+
+    let odi = document.getElementById("odi");
+    let x;
+        
+        window.addEventListener("mousemove", odimove);
+        
+        function odimove(e) {
+            odi.style.left = e.pageX * 0.7 + "px";
+            console.log(odi.style.left);
+      }
+
+    </script>
+
+    <script>
+        let mouseCursor = document.querySelector(".cursor");
+        
+        window.addEventListener("scroll", cursor);
+        window.addEventListener("mousemove", cursor);
+        
+        function cursor(e) {
+          mouseCursor.style.left = e.pageX + "px";
+          mouseCursor.style.top = e.pageY - scrollY + "px";
+      }
+      </script>
+
+
+    <script>
+        
         
     
         // ('#copybtn1').onclick(function() {
