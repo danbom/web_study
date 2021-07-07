@@ -273,7 +273,7 @@ header ul .header-item4 a:hover {
 .recent-work-text {
     position: absolute;
     left: 13vw;
-    top: 30vh;
+    top: 32vh;
     /* width: 100vw; */
 }
 
@@ -297,7 +297,7 @@ header ul .header-item4 a:hover {
 .recent-work-desc {
     position: absolute;
     left: 13vw;
-    top: 40vh;
+    top: 42vh;
     width: 30vw;
 }
 
@@ -338,7 +338,7 @@ header ul .header-item4 a:hover {
 }
 
 .recent-work-img-zone .circle {
-    transition: all 0.2s ease-out;
+    /* transition: all 0.2s ease-out; */
     position: absolute;
     top: 4vh;
     left: 11vw;
@@ -350,23 +350,113 @@ header ul .header-item4 a:hover {
 }
 
 .recent-work-img-zone .circle.active {
-    transition: all 0.5s ease-out;
+    transition: all 0.3s ease-out;
     width: 550px;
     height: 460px;
-    transform: translateX(-110px);
-    background-color: #f7ba01b2;
-    border-radius: 10px;
+    transform: translateX(-80px);
+    background-color: transparent;
+    border-radius: 24px;
     z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
+
+.recent-work-img-zone .circle .wave1 {
+    visibility: hidden;
+}
+
+.recent-work-img-zone .circle .wave2
+{
+    visibility: hidden;
+}
+
+.recent-work-img-zone .circle .wave3 {
+    visibility: hidden;
+}
+
+.recent-work-img-zone .circle .wave4 {
+    visibility: hidden;
+}
+
+.recent-work-img-zone .circle.active .wave1.active {
+    opacity: 0.3;
+  position: absolute;
+  background: #8587f8;
+  width: 380px;
+  height: 380px;
+  border-radius: 44%;
+  animation: drift 3000ms infinite linear;
+  visibility: visible;
+}
+
+.recent-work-img-zone .circle.active .wave2.active
+{
+    opacity: 0.3;
+  position: absolute;
+  background: #7678ed;
+  width: 400px;
+  height: 400px;
+  border-radius: 44%;
+  animation: drift 5000ms infinite linear;
+  visibility: visible;
+}
+
+.recent-work-img-zone .circle.active .wave3.active {
+    opacity: 0.3;
+  position: absolute;
+  background: #6769df;
+  width: 420px;
+  height: 420px;
+  border-radius: 44%;
+  animation: drift 7000ms infinite linear;
+  visibility: visible;
+}
+
+.recent-work-img-zone .circle.active .wave4.active {
+    transition: all 0.5s ease-in-out;
+    margin-top: 0.4rem;
+    opacity: 0.8;
+  position: absolute;
+  background: #e8e6ec;
+  width: 80px;
+  height: 19px;
+  border-radius: 60px;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 600ms;
+  visibility: visible;
+}
+
+@keyframes drift {
+    from {
+      transform: rotate(0deg);
+    }
+    from {
+      transform: rotate(360deg);
+    }
+  }
+
+@keyframes slidein {
+    from {
+      margin-left: 20%;
+      opacity: 0.7;
+    }
+  
+    to {
+      margin-left: -20%;
+      opacity: 0.3;
+    }
+  }
 
 .recent-work-img-zone .circle-text {
     color: transparent;
     font-size: 0rem;
     visibility: hidden;
     padding-top: 800px;
+    opacity: 0;
 }
 
 .recent-work-img-zone .circle-text.active {
@@ -377,10 +467,7 @@ header ul .header-item4 a:hover {
     color: #fff;
     font-size: 1.7rem;
     transform: translateY(-400px);
-}
-
-.recent-work-img-zone .circle-text i {
-    padding-left: 0.3rem;
+    opacity: 1;
 }
 
 .recent-work-img-zone img {
