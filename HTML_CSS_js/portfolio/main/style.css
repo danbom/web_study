@@ -270,9 +270,57 @@ header ul .header-item4 a:hover {
 /* Section-3
  * --------------------------------------- */
 
+.recent-work-text {
+    position: absolute;
+    left: 10vw;
+    top: 21vh;
+    /* width: 100vw; */
+}
 
+.recent-work-text-small {
+    position: absolute;
+    width: 20vw;
+}
 
+.recent-work-text-big {
+    position: absolute;
+    top: 1rem;
+    width: 30vw;
+    font-size: 1.5rem;
+}
 
+.recent-work-desc {
+    position: absolute;
+    left: 10vw;
+    top: 35vh;
+    width: 30vw;
+}
+
+.main-desc{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.long-desc {
+    max-width: 30vw;
+}
+
+.recent-work-img-zone {
+    position: absolute;
+    top: 22vh;
+    left: 44vw;
+}
+
+.recent-work-img-zone .circle {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #ec4e4e;
+}
+
+.recent-work-img-zone img {
+    width: 80%;
+}
 
 /* Section-4
  * --------------------------------------- */
