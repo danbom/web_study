@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100;200;300;400;500;600;700;800;900&family=Yomogi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 * {
     font-family: 'Encode Sans SC', sans-serif;
@@ -141,7 +142,7 @@ header ul li div {
     width: 50px;
     height: 8px;
     border-radius: 6px 0 6px 0 ;
-    background-color: #88888820;
+    background-color: #88888810;
     transition: all 0.22s ease-in-out;
 }
 
@@ -171,31 +172,125 @@ header ul .header-item4 a:hover {
 
 #section-1 {
     background-color: #e8e6ec !important;
+    display: flex;
+}
+
+.bigwave-zone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bigwave1 {
+    position: absolute;
+    top: 10vh;
+    left: 50vw;
+    transition: all 0.3s ease-out;
+    opacity: 1;
+    background: #7678ed20;
+    width: 1700px;
+    height: 1700px;
+    border-radius: 44%;
+    animation: drift 6000ms infinite linear;
+    visibility: visible;
+}
+
+.bigwave2 {
+    position: absolute;
+    top: 10vh;
+    left: 50vw;
+    transition: all 0.3s ease-out;
+    opacity: 1;
+    background: #7678ed20;
+    width: 1680px;
+    height: 1680px;
+    border-radius: 44%;
+    animation: drift 7000ms infinite linear;
+    visibility: visible;
+}
+
+.bigwave3 {
+    position: absolute;
+    top: 10vh;
+    left: 50vw;
+    transition: all 0.3s ease-out;
+    opacity: 1;
+    background: #7678ed20;
+    width: 1650px;
+    height: 1650px;
+    border-radius: 44%;
+    animation: drift 8000ms infinite linear;
+    visibility: visible;
+}
+
+#section-1 .intro-text-zone {
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 40vh;
+    left: 15vw;
+    text-align: end;
+}
+
+#section-1 .intro-text-zone .h2-bottom {
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-bottom: 0.6rem;
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+
+
+#section-1 .intro-text-zone span {
+    font-size: 1.5rem;
+    color: #252525;
+}
+
+#section-1 .intro-text-zone span i {
+    padding-right: 1px;
+    padding-left: 7px;
+    transition: all 0.2s ease-in-out;
+}
+
+#section-1 .intro-text-zone span i:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+    color: #22222248;
+}
+
+#section-1 .intro-text-zone span i#copybtn1 {
+    padding-right: 1px;
+    padding-left: 7px;
+    cursor: pointer;
 }
 
 #section-1 h1{
     color: #1f1f1f;
     font-size: 3em;
     font-weight: 900;
-    padding-left: 15vw;
+    animation-name: section1-slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 3000ms;
+    animation-fill-mode: forwards;
 }
 
 #section-1 h2{
     font-size: 1.1em;
-    font-weight: 400;
+    font-weight: 500;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
-    color: #181818;
-    margin-top: 0.5em;
-    padding-right: 30px;
-    padding-left: 15vw;
-    line-height: 1.2em;
+    color: #383838;
+    line-height: 1.3em;
+    padding-top: 3px;
 }
 
 #section-1 li {
     display: inline-block;
     margin: 1.25em 0.3em;
 }
+
 .section-1-button{
     padding: 0.93em 1.87em;
     background: #35495e;
@@ -272,9 +367,20 @@ header ul .header-item4 a:hover {
 
 .recent-work-text {
     position: absolute;
-    left: 13vw;
-    top: 32vh;
+    left: 11vw;
+    top: 35vh;
     /* width: 100vw; */
+}
+
+.recent-work-deco {
+    position: absolute;
+    left: 13.5rem;
+    top: 4.7rem;
+    width: 60px;
+    height: 20px;
+    background-color: #3d348b60;
+    transform: rotate(-15deg);
+    border-radius: 5px;
 }
 
 .recent-work-text-small {
@@ -283,46 +389,54 @@ header ul .header-item4 a:hover {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+    z-index: 2;
 }
 
 .recent-work-text-big {
     position: absolute;
-    top: 1rem;
+    top: 1.2rem;
     width: 30vw;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     font-size: 1.4rem;
+    z-index: 2;
 }
 
 .recent-work-desc {
     position: absolute;
-    left: 13vw;
-    top: 42vh;
-    width: 30vw;
+    left: 11vw;
+    top: 52vh;
+    width: 35vw;
 }
 
 .sub-desc {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
-    padding-bottom: 0.4rem;
+    padding-bottom: 0.5rem;
 }
 
 .sub-desc span {
-    padding-left: 0.3rem;
+    padding-right: 0.3rem;
     font-size: 1rem;
 }
 
 .main-desc{
-    
-    font-size: 3.5rem;
+    position: absolute;
+    top: 2rem;
+    color: #282828;
+    font-size: 3.7rem;
+    letter-spacing: -1px;
     font-weight: 800;
+    padding-bottom: 0.4rem;
 }
 
 .long-desc {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
     line-height: 1.3rem;
     max-width: 100%;
 }
@@ -347,6 +461,7 @@ header ul .header-item4 a:hover {
     border-radius: 420px;
     background-color: #7678ed;
     z-index: 1;
+    transition: all 0.3s ease-in-out;
 }
 
 .recent-work-img-zone .circle.active {
@@ -364,23 +479,28 @@ header ul .header-item4 a:hover {
 }
 
 .recent-work-img-zone .circle .wave1 {
+    transition: all 0.3s ease-out;
     visibility: hidden;
 }
 
 .recent-work-img-zone .circle .wave2
 {
+    transition: all 0.3s ease-out;
     visibility: hidden;
 }
 
 .recent-work-img-zone .circle .wave3 {
+    transition: all 0.3s ease-out;
     visibility: hidden;
 }
 
 .recent-work-img-zone .circle .wave4 {
+    transition: all 0.3s ease-out;
     visibility: hidden;
 }
 
 .recent-work-img-zone .circle.active .wave1.active {
+    transition: all 0.3s ease-out;
     opacity: 0.3;
   position: absolute;
   background: #8587f8;
@@ -393,6 +513,7 @@ header ul .header-item4 a:hover {
 
 .recent-work-img-zone .circle.active .wave2.active
 {
+    transition: all 0.3s ease-out;
     opacity: 0.3;
   position: absolute;
   background: #7678ed;
@@ -404,6 +525,7 @@ header ul .header-item4 a:hover {
 }
 
 .recent-work-img-zone .circle.active .wave3.active {
+    transition: all 0.3s ease-out;
     opacity: 0.3;
   position: absolute;
   background: #6769df;
@@ -443,11 +565,30 @@ header ul .header-item4 a:hover {
     from {
       margin-left: 20%;
       opacity: 0.7;
+      color: #ec4e4e;
     }
   
     to {
       margin-left: -20%;
       opacity: 0.3;
+      color: #f7b801;
+    }
+  }
+
+@keyframes section1-slidein {
+    from {
+      opacity: 0.5;
+      color: #ec4e4e;
+    }
+
+    50% {
+        opacity: 0.5;
+        color: #f7b801;
+      }
+  
+    to {
+      opacity: 0.5;
+      color: #6769df;
     }
   }
 
@@ -664,7 +805,7 @@ header ul .header-item4 a:hover {
     /* left: 0;
     top: 0; */
     width: 100vw;
-    height: 737px;
+    height: 757px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -916,10 +1057,12 @@ a:-webkit-any-link {
 }
 
 .works-desc {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
     position: absolute;
     top: 26.5vh;
     width: 100vw;
-    padding: 0 30vw;
+    padding: 2px 450px;
     font-size: 0.98rem;
     font-weight: 400;
     color:#252525;
@@ -1005,11 +1148,11 @@ a:-webkit-any-link {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 120px;
+    padding-top: 170px;
 }
 
 .sonemary-left-img-zone {
-    width: 750px;
+    width: 740px;
     overflow: hidden;
 }
 
@@ -1056,7 +1199,7 @@ a:-webkit-any-link {
 }
 
 .gongdal-img-zone {
-    width: 1000px;
+    width: 900px;
     /* overflow: hidden; */
 }
 
@@ -1072,7 +1215,7 @@ a:-webkit-any-link {
 }
 
 .airang-img-zone {
-    width: 1000px;
+    width: 900px;
     /* overflow: hidden; */
 }
 
