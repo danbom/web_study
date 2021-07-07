@@ -561,7 +561,7 @@ header ul .header-item4 a:hover {
 .sonemary-right-img-zone span {
     padding-left: 20px;
     /* font-family: Yomogi; */
-    font-weight: 500;
+    /* font-weight: 500;
 }
 
 .sonemary-right-img-zone span i{
@@ -581,33 +581,20 @@ header ul .header-item4 a:hover {
     padding-left: 10px;
     padding-bottom: 10px;
     border-radius: 10px;
-} */
+}  */
 
-.gongdal-img-zone {
-    margin-top: 30vh;
-    float: right;
-    width: 70vw;
-    height: 100vh;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    overflow: hidden;
-}
-
-
-.gongdal-img-zone .gongdal-hover-zone {
-    overflow: hidden;
+.gongdal-zone {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    padding-top: 187px;
+}
+
+.gongdal-img-zone {
+    width: 1000px;
+    /* overflow: hidden; */
 }
 
 .gongdal-img-zone img {
-    width: 110%;
-}
-
-.gongdal-img-zone gongdal-hover-zone:hover {
-    z-index: 2;
-    background-color: #33333360;
+    width: 100%;
 }
