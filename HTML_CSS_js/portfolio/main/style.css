@@ -235,14 +235,14 @@ header ul .header-item4 a:hover {
 
 #section-1 .intro-text-zone .h2-bottom {
     font-family: 'Noto Sans KR', sans-serif;
-    padding-bottom: 0.6rem;
+    padding-bottom: 0.6vw;
     font-weight: 400;
-    font-size: 0.95rem;
+    font-size: 0.95vw;
 }
 
 
 #section-1 .intro-text-zone span {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
     color: #252525;
 }
 
@@ -266,7 +266,7 @@ header ul .header-item4 a:hover {
 
 #section-1 h1{
     color: #1f1f1f;
-    font-size: 3em;
+    font-size: 3vw;
     font-weight: 900;
     animation-name: section1-slidein;
     animation-iteration-count: infinite;
@@ -276,12 +276,12 @@ header ul .header-item4 a:hover {
 }
 
 #section-1 h2{
-    font-size: 1.1em;
+    font-size: 1.1vw;
     font-weight: 500;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     color: #383838;
-    line-height: 1.3em;
+    line-height: 1.3vw;
     padding-top: 3px;
 }
 
@@ -382,9 +382,9 @@ header ul .header-item4 a:hover {
 
 .mini-text {
     color: #181818;
-    font-size: 0.9em;
+    font-size: 0.9vw;
     font-weight: 500;
-    line-height: 1.25em;
+    line-height: 1.25vw;
 }
 
 
@@ -397,13 +397,13 @@ header ul .header-item4 a:hover {
 }
 
 .big-text {
-    font-size: 2.7rem;
+    font-size: 2.7vw;
     width: 100vw;
     text-align: center;
     padding: 0 24vw; 
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 700;
-    line-height: 3.5rem;
+    line-height: 3.5vw;
 }
 
 .small-text {
@@ -412,22 +412,23 @@ header ul .header-item4 a:hover {
     width: 100vw;
     text-align: center;
     padding: 70px 300px; 
+    font-size: 1vw;
 }
 
 #section-2 h2 {
-    font-size: 1.9em;
+    font-size: 1.9vw;
     /* font-weight: 600; */
     position: relative;
     width: 100%;
     padding: 0;
-    line-height: 1.5em;
+    line-height: 1.5vw;
     width: 100%;
     color: #181818;
 }
 
 #section-2 h3 {
     color: #181818;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 300;
     position: relative;
     width: 100%;
@@ -462,8 +463,8 @@ header ul .header-item4 a:hover {
 
 .recent-work-deco {
     position: absolute;
-    left: 13.5rem;
-    top: 4.7rem;
+    left: 14vw;
+    top: 9vh;
     width: 60px;
     height: 20px;
     background-color: #3d348b60;
@@ -476,7 +477,7 @@ header ul .header-item4 a:hover {
     width: 20vw;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1vw;
     z-index: 2;
 }
 
@@ -486,7 +487,7 @@ header ul .header-item4 a:hover {
     width: 30vw;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
-    font-size: 1.4rem;
+    font-size: 1.4vw;
     z-index: 2;
 }
 
@@ -500,32 +501,32 @@ header ul .header-item4 a:hover {
 .sub-desc {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 1.1vw;
     text-transform: uppercase;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.5vw;
 }
 
 .sub-desc span {
-    padding-right: 0.3rem;
-    font-size: 1rem;
+    padding-right: 0.3vw;
+    font-size: 1vw;
 }
 
 .main-desc{
     position: absolute;
     top: 2rem;
     color: #282828;
-    font-size: 3.7rem;
+    font-size: 3.7vw;
     letter-spacing: -1px;
     font-weight: 800;
-    padding-bottom: 0.4rem;
+    padding-bottom: 0.4vw;
 }
 
 .long-desc {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
-    font-size: 0.9rem;
+    font-size: 0.9vw;
     letter-spacing: 1px;
-    line-height: 1.3rem;
+    line-height: 1.3vw;
     max-width: 100%;
 }
 
@@ -706,7 +707,7 @@ header ul .header-item4 a:hover {
     visibility: visible;
     z-index: 4;
     color: #fff;
-    font-size: 1.7rem;
+    font-size: 1.7vw;
     transform: translateY(-400px);
     opacity: 1;
 }
@@ -982,7 +983,7 @@ a:-webkit-any-link {
     position: absolute;
     transition: all 0.4s ease-out;
     visibility: visible;
-    font-size: 0.8rem;
+    font-size: 0.8vw;
     z-index: 2;
     padding: 15px 20px;
     background-color: transparent;
@@ -1021,7 +1022,7 @@ a:-webkit-any-link {
     position: absolute;
     transition: all 0.4s ease-out;
     visibility: visible;
-    font-size: 0.8rem;
+    font-size: 0.8vw;
     z-index: 2;
     padding: 15px 20px;
     background-color: transparent;
@@ -1047,7 +1048,7 @@ a:-webkit-any-link {
     bottom: 100px;
     transition: all 0.1s linear;
     visibility: hidden;
-    font-size: 0.8rem;
+    font-size: 0.8vw;
     z-index: 2;
     padding: 15px 20px;
     background-color: transparent;
@@ -1085,7 +1086,7 @@ a:-webkit-any-link {
     bottom: 15px;
     transition: all 0.1s linear;
     visibility: hidden;
-    font-size: 0.8rem;
+    font-size: 0.8vw;
     z-index: 2;
     padding: 15px 20px;
     background-color: transparent;
@@ -1123,7 +1124,7 @@ a:-webkit-any-link {
     bottom: 435px;
     transition: all 0.1s linear;
     visibility: hidden;
-    font-size: 0.8rem;
+    font-size: 0.8vw;
     z-index: 2;
     padding: 15px 20px;
     background-color: transparent;
@@ -1135,7 +1136,7 @@ a:-webkit-any-link {
     position: absolute;
     transition: all 0.4s ease-out;
     visibility: visible;
-    font-size: 0.8rem;
+    font-size: 0.8vw;
     z-index: 2;
     padding: 15px 20px;
     background-color: transparent;
@@ -1160,7 +1161,7 @@ a:-webkit-any-link {
     position: absolute;
     top: 17.3vh;
     width: 100vw;
-    font-size: 3.3rem;
+    font-size: 3.3vw;
     letter-spacing: -2px;
     font-weight: 800;
     color:#252525;
@@ -1170,7 +1171,7 @@ a:-webkit-any-link {
     position: absolute;
     top: 17vh;
     width: 100vw;
-    font-size: 0.87rem;
+    font-size: 0.87vw;
     font-weight: 400;
     color:#252525;
 }
@@ -1181,8 +1182,8 @@ a:-webkit-any-link {
     position: absolute;
     top: 26.5vh;
     width: 100vw;
-    padding: 2px 450px;
-    font-size: 0.98rem;
+    padding: 2px 25vw;
+    font-size: 0.98vw;
     font-weight: 300;
     color:#252525;
 }
