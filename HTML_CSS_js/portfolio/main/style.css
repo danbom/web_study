@@ -928,12 +928,31 @@ header ul .header-item4 a:hover {
     width: 0;
     border-width: 20px 20px 20px 0;
     border-color: transparent #333 transparent transparent;
+    transition: all 0.3s linear;
 }
 
 .fp-controlArrow.fp-next {
     right: 8vw;
     border-width: 20px 0 20px 20px;
     border-color: transparent transparent transparent #333;
+    transition: all 0.3s linear;
+}
+
+.fp-controlArrow.fp-next:hover
+{
+    transform: scale(1.3,1.3);
+    transform: translateX(10px);
+    border-color: transparent transparent transparent#222;
+    opacity: 0.8;
+    transition: all 0.3s linear;
+}
+
+.fp-controlArrow.fp-prev:hover {
+    transform: scale(1.3,1.3);
+    transform: translateX(-10px);
+    border-color: transparent #222 transparent transparent;
+    opacity: 0.8;
+    transition: all 0.3s linear;
 }
 
 .slide-zone {
