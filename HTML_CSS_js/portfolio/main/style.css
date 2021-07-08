@@ -298,6 +298,43 @@ header ul .header-item4 a:hover {
     color: #181818;
 }
 
+.scrolldown {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    animation: scrolldown 1200ms infinite ease;
+}
+
+.scrolldown span {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.scrolldown span::before {
+    content: '';
+    position: absolute;
+    left: -5.7px;
+    top: 0;
+    width: 16px;
+    height: 2.5px;
+    border-radius: 150px;
+    transform: rotate(25deg);
+    background-color: #444;
+}
+
+.scrolldown span::after {
+    content: '';
+    position: absolute;
+    left: 5.7px;
+    top: 0;
+    width: 16px;
+    height: 2.5px;
+    border-radius: 150px;
+    transform: rotate(-25deg);
+    background-color: #444;
+}
+
 /* Section-2
  * --------------------------------------- */
 
@@ -690,6 +727,22 @@ header ul .header-item4 a:hover {
       }
       to {
         top: 68vh;
+      }
+}
+
+@keyframes scrolldown {
+    from {
+        top: 88.7%;
+        opacity: 0.5;
+      }
+
+    50% {
+        top: 90%;
+        opacity: 1;
+    }
+      to {
+        top: 88.7%;
+        opacity: 0.5;
       }
 }
 
