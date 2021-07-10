@@ -638,11 +638,20 @@ header ul .header-item4 a:hover {
   }
 }
 
-.recent-work-img {
+.now-work-img {
   position: absolute;
   width: 40%;
-  top: 12%;
+  top: 14%;
+  left: 5%;
+  z-index: 2;
+}
+
+.recent-work-img {
+  position: absolute;
+  width: 42%;
+  top: 15%;
   left: 53%;
+  z-index: 2;
 }
 
 .seeuletter-title {
@@ -759,41 +768,41 @@ header ul .header-item4 a:hover {
 
 .now-wave1-1 {
   position: absolute;
-  top: calc(15% - 25px);
-  left: calc(25% - 25px);
+  top: 28%;
+  left: 17%;
   transition: all 0.3s ease-out;
   opacity: 1;
-  background: #6769df30;
-  width: 50px;
-  height: 50px;
+  background: #f7b80150;
+  width: 300px;
+  height: 300px;
   border-radius: 44%;
-  animation: drift 6000ms infinite linear;
+  animation: drift 5000ms infinite linear;
   visibility: visible;
 }
 
 .now-wave1-2 {
   position: absolute;
-  top: calc(15% - 20px);
-  left: calc(25% - 20px);
+  top: 30%;
+  left: 17.5%;
   transition: all 0.3s ease-out;
   opacity: 1;
-  background: #6769df30;
-  width: 40px;
-  height: 40px;
+  background: #f7b80150;
+  width: 270px;
+  height: 270px;
   border-radius: 44%;
-  animation: drift 7000ms infinite linear;
+  animation: drift 8000ms infinite linear;
   visibility: visible;
 }
 
 .now-wave2-1 {
   position: absolute;
-  top: calc(15% - 25px);
-  left: calc(75% - 25px);
+  top: 30%;
+  left: 67%;
   transition: all 0.3s ease-out;
   opacity: 1;
   background: #8587f830;
-  width: 50px;
-  height: 50px;
+  width: 300px;
+  height: 300px;
   border-radius: 44%;
   animation: drift 6000ms infinite linear;
   visibility: visible;
@@ -801,13 +810,13 @@ header ul .header-item4 a:hover {
 
 .now-wave2-2 {
   position: absolute;
-  top: calc(15% - 20px);
-  left: calc(75% - 20px);
+  top: 32%;
+  left: 68%;
   transition: all 0.3s ease-out;
   opacity: 1;
   background: #8587f830;
-  width: 40px;
-  height: 40px;
+  width: 270px;
+  height: 270px;
   border-radius: 44%;
   animation: drift 7000ms infinite linear;
   visibility: visible;
