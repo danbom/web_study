@@ -638,6 +638,13 @@ header ul .header-item4 a:hover {
   }
 }
 
+.recent-work-img {
+  position: absolute;
+  width: 40%;
+  top: 12%;
+  left: 53%;
+}
+
 .seeuletter-title {
   text-align: center;
   position: absolute;
@@ -1402,7 +1409,8 @@ header ul .header-item4 a:hover {
   /* left: 0;
     top: 0; */
   width: 100vw;
-  height: 790px;
+  /* height: 790px; */
+  top: 86%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1414,7 +1422,8 @@ header ul .header-item4 a:hover {
   /* left: 0;
     top: 0; */
   width: 100vw;
-  height: 760px;
+  /* height: 760px; */
+  top: 86%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1426,7 +1435,8 @@ header ul .header-item4 a:hover {
   /* left: 0;
     top: 0; */
   width: 100vw;
-  height: 680px;
+  /* height: 680px; */
+  top: 86%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1438,7 +1448,7 @@ header ul .header-item4 a:hover {
   /* left: 0;
     top: 0; */
   width: 100vw;
-  height: 810px;
+  top: 86%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1475,7 +1485,6 @@ a:-webkit-any-link {
 
 .works-popup .popup-zone1 {
   position: absolute;
-  bottom: 41%;
   transition: all 0.1s linear;
   visibility: hidden;
   font-size: 0.8rem;
@@ -1513,7 +1522,7 @@ a:-webkit-any-link {
 
 .works-popup .popup-zone2 {
   position: absolute;
-  bottom: 43%;
+  /* bottom: 43%; */
   transition: all 0.1s linear;
   visibility: hidden;
   font-size: 0.8rem;
@@ -1551,7 +1560,7 @@ a:-webkit-any-link {
 
 .works-popup3 .popup-zone3 {
   position: absolute;
-  bottom: 39%;
+  /* bottom: 39%; */
   transition: all 0.1s linear;
   visibility: hidden;
   font-size: 0.8vw;
@@ -1589,7 +1598,7 @@ a:-webkit-any-link {
 
 .works-popup4 .popup-zone4 {
   position: absolute;
-  bottom: 35%;
+  /* bottom: 35%; */
   transition: all 0.1s linear;
   visibility: hidden;
   font-size: 0.8vw;
@@ -1627,7 +1636,7 @@ a:-webkit-any-link {
 
 .works-popup5 .popup-zone5 {
   position: absolute;
-  bottom: 54%;
+  /* bottom: 54%; */
   transition: all 0.1s linear;
   visibility: hidden;
   font-size: 0.8vw;
@@ -1702,6 +1711,7 @@ a:-webkit-any-link {
   width: 100vw;
   cursor: pointer;
   transition: 0.25s;
+  z-index: 3;
 }
 
 .works-detail div {
@@ -1841,11 +1851,11 @@ a:-webkit-any-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 187px;
+  padding-top: 8.5%;
 }
 
 .gongdal-img-zone {
-  width: 900px;
+  width: 42%;
   /* overflow: hidden; */
 }
 
