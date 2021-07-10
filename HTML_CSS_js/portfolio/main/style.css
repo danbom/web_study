@@ -1860,11 +1860,11 @@ a:-webkit-any-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 8.5%;
+  padding-top: 10%;
 }
 
 .gongdal-img-zone {
-  width: 42%;
+  width: 48%;
   /* overflow: hidden; */
 }
 
