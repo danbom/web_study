@@ -28,6 +28,7 @@ a:-webkit-any-link {
 }
 
 .header {
+  width: 13%;
   font-family: "Poppins", sans-serif;
   margin-left: 5%;
   padding: 1%;
@@ -518,10 +519,18 @@ i {
 }
 
 .wordcloud-zone {
+  overflow: hidden;
   margin: 3% 30%;
   border-radius: 10px;
   padding: 3%;
+  display: flex-end;
   background-color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.wordcloud-zone img {
+  width: 100%;
 }
 
 .wordcloud-name {
