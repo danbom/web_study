@@ -15,6 +15,12 @@ a {
   text-decoration: none;
 }
 
+a:-webkit-any-link {
+  color: #111;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .header-zone {
   width: 100%;
   height: max-content;
