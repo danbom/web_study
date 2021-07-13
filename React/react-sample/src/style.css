@@ -11,6 +11,10 @@ body {
   background-color: #edf2fb;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header-zone {
   width: 100%;
   height: max-content;
@@ -24,6 +28,7 @@ body {
   font-size: 2vw;
   font-weight: 700;
   letter-spacing: -1.5px;
+  color: #111;
 }
 
 /* .header::first-letter {
