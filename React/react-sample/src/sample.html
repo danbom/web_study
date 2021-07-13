@@ -1,164 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Markable Sample</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="header-zone">
-        <div class="header">Mark-Able</div>
+      <div class="header">Mark-Able</div>
     </div>
 
     <div class="title-zone">
-        <div class="title">
-            Welcome Trademark Verification
-        </div>
-        <div class="title-desc">
-            상표 출원 전, 유사도 문제
-            국내 최초 상표 분석 인공지능에게 물어보세요
-        </div>
+      <div class="title">Welcome Trademark Verification</div>
+      <div class="title-desc">
+        상표 출원 전, 유사도 문제 국내 최초 상표 분석 인공지능에게 물어보세요
+      </div>
     </div>
 
     <div class="input-zone">
-        <div class="category-options">
-            <p>
-                <select id="class" onChange = {processNumber}>
-                    <option value="">상표 분류 선택</option>
-                  <optgroup label="카테고리">
-                    <option value="1">제1류</option>
-                    <option value="2">제2류</option>
-                    <option value="3">제3류</option>
-                    <option value="4">제4류</option>
-                    <option value="5">제5류</option>
-                    <option value="6">제6류</option>
-                    <option value="7">제7류</option>
-                    <option value="8">제8류</option>
-                    <option value="9">제9류</option>
-                    <option value="10">제10류</option>
-                    <option value="11">제11류</option>
-                    <option value="12">제12류</option>
-                    <option value="13">제13류</option>
-                    <option value="14">제14류</option>
-                    <option value="15">제15류</option>
-                    <option value="16">제16류</option>
-                    <option value="17">제17류</option>
-                    <option value="18">제18류</option>
-                    <option value="19">제19류</option>
-                  </optgroup>
-                </select>
-              </p>
-        </div>
-        <div class="input-name">
-            <p>
-                <input type="text" placeholder="상표명 입력" onChange={processText}/>
-            </p>
-        </div>
-        <div class="similarity-check-btn">
-            <p>
-                <button>
-                  Check similarity
-                </button>
-              </p>
-        </div>
+      <div class="category-options">
+        <p>
+          <select id="class" onChange="{processNumber}">
+            <option value="">상표 분류 선택</option>
+            <optgroup label="카테고리">
+              <option value="1">제1류</option>
+              <option value="2">제2류</option>
+              <option value="3">제3류</option>
+              <option value="4">제4류</option>
+              <option value="5">제5류</option>
+              <option value="6">제6류</option>
+              <option value="7">제7류</option>
+              <option value="8">제8류</option>
+              <option value="9">제9류</option>
+              <option value="10">제10류</option>
+              <option value="11">제11류</option>
+              <option value="12">제12류</option>
+              <option value="13">제13류</option>
+              <option value="14">제14류</option>
+              <option value="15">제15류</option>
+              <option value="16">제16류</option>
+              <option value="17">제17류</option>
+              <option value="18">제18류</option>
+              <option value="19">제19류</option>
+            </optgroup>
+          </select>
+        </p>
+      </div>
+      <div class="input-name">
+        <p>
+          <input
+            type="text"
+            placeholder="상표명 입력"
+            onChange="{processText}"
+          />
+        </p>
+      </div>
+      <div class="similarity-check-btn">
+        <p>
+          <button>Check similarity</button>
+        </p>
+      </div>
     </div>
-    
+
     <div class="intro-zone">
-        <div class="step">
-            <div class="step-deco"></div>
-            <div class="icon">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </div>
-            <div class="step-desc">
-                24시간 검색 가능
-            </div>
+      <div class="step">
+        <div class="step-deco"></div>
+        <div class="icon">
+          <i class="fa fa-search" aria-hidden="true"></i>
         </div>
-        <div class="step">
-            <div class="step-deco"></div>
-            <div class="icon">
-                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-            </div>
-            <div class="step-desc">
-                상표 전문 Mark AI
-            </div>
+        <div class="step-desc">24시간 검색 가능</div>
+      </div>
+      <div class="step">
+        <div class="step-deco"></div>
+        <div class="icon">
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
         </div>
-        <div class="step">
-            <div class="step-deco"></div>
-            <div class="icon">
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
-            </div>
-            <div class="step-desc">
-                5분 내 예측 완료
-            </div>
+        <div class="step-desc">상표 전문 Mark AI</div>
+      </div>
+      <div class="step">
+        <div class="step-deco"></div>
+        <div class="icon">
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
         </div>
-        <div class="step">
-            <div class="step-deco"></div>
-            <div class="icon">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i>
-            </div>
-            <div class="step-desc">
-                Report 제공
-            </div>
+        <div class="step-desc">5분 내 예측 완료</div>
+      </div>
+      <div class="step">
+        <div class="step-deco"></div>
+        <div class="icon">
+          <i class="fa fa-file-text-o" aria-hidden="true"></i>
         </div>
+        <div class="step-desc">Report 제공</div>
+      </div>
     </div>
 
     <div class="loading-zone">
-
-        <div class="loading-effect-zone">
-            <div class="slack"><span class="slack-dot slack-dot--a"></span><span class="slack-dot slack-dot--b"></span><span class="slack-dot slack-dot--c"></span><span class="slack-dot slack-dot--d"></span>
-            </div>
+      <div class="loading-effect-zone">
+        <div class="slack">
+          <span class="slack-dot slack-dot--a"></span
+          ><span class="slack-dot slack-dot--b"></span
+          ><span class="slack-dot slack-dot--c"></span
+          ><span class="slack-dot slack-dot--d"></span>
         </div>
-        
+      </div>
 
-        <div class="loading-txt">
-            loading ...
-        </div>
-        
+      <div class="loading-txt">loading ...</div>
     </div>
 
     <div class="result-zone">
-        <div class="result-txt">
-            입력하신 상표와 기존 상표 데이터와의 유사도는 00%입니다.
+      <div class="result-txt">
+        입력하신 상표와 기존 상표 데이터와의 유사도는 00%입니다.
+      </div>
+      <div class="wordcloud-zone">
+        <div class="wordcloud-name">유사한 상표 목록</div>
+        <img src="wordcloud.png" />
+        <div class="wordcloud-desc">
+          단어의 크기가 클수록 유사도가 높습니다.
         </div>
-        <div class="wordcloud-zone">
-            <div class="wordcloud-name">
-                유사한 상표 목록
-            </div>
-            <img src="wordcloud.png">
-            <div class="wordcloud-desc">
-                단어의 크기가 클수록 유사도가 높습니다.
-            </div>
-        </div>
+      </div>
     </div>
 
     <script>
-        const introzone = document.querySelector(".intro-zone");
-        const loadingzone = document.querySelector(".loading-zone");
-        const resultzone = document.querySelector(".result-zone");
+      const introzone = document.querySelector(".intro-zone");
+      const loadingzone = document.querySelector(".loading-zone");
+      const resultzone = document.querySelector(".result-zone");
 
-        document.querySelector(".similarity-check-btn").onclick = function () {
-            introzone.style.display = "none";
-            loadingzone.style.display = "block";
-            setTimeout(function() {
-                loadingzone.style.display = "none";
-                resultzone.style.display = "block";
-            }, 3000);
+      document.querySelector(".similarity-check-btn").onclick = function () {
+        introzone.style.display = "none";
+        loadingzone.style.display = "block";
+        resultzone.style.display = "none";
+        setTimeout(function () {
+          loadingzone.style.display = "none";
+          resultzone.style.display = "block";
+        }, 3000);
       };
-
-      
-
     </script>
-</body>
-
-
-
+  </body>
 </html>
