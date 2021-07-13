@@ -203,11 +203,11 @@ i {
 
 .loading-zone {
   display: none;
-  margin: 5% 25%;
+  margin: 0 25% 10% 25%;
   width: 50%;
   border-radius: 20px;
   height: max-content;
-  background-color: #f7f9fd;
+  background-color: transparent;
   display: flex-wrap;
   justify-content: center;
   align-items: center;
@@ -495,7 +495,7 @@ i {
 
 .result-zone {
   display: none;
-  margin-top: 5%;
+  margin: 5% 0 10% 0;
   display: flex-wrap;
   justify-content: center;
   align-items: center;
