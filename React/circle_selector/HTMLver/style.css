@@ -1,0 +1,167 @@
+.wheel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 692px;
+  height: 692px;
+  overflow: hidden;
+  background-color: #1465d7;
+}
+
+.wheel {
+  position: relative;
+  width: 623px;
+  height: 623px;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  transform: translateY(-50%);
+}
+.wheel > * {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 42px;
+  height: 42px;
+  margin: -21px;
+}
+.wheel > *:nth-of-type(1) {
+  transform: rotate(0deg) translate(311.5px) rotate(0deg);
+}
+.wheel > *:nth-of-type(2) {
+  transform: rotate(72deg) translate(311.5px) rotate(-72deg);
+}
+.wheel > *:nth-of-type(3) {
+  transform: rotate(144deg) translate(311.5px) rotate(-144deg);
+}
+.wheel > *:nth-of-type(4) {
+  transform: rotate(216deg) translate(311.5px) rotate(-216deg);
+}
+.wheel > *:nth-of-type(5) {
+  transform: rotate(288deg) translate(311.5px) rotate(-288deg);
+}
+/* .wheel > *:nth-of-type(6) {
+  transform: rotate(69.2307692308deg) translate(311.5px)
+    rotate(-69.2307692308deg);
+}
+.wheel > *:nth-of-type(7) {
+  transform: rotate(83.0769230769deg) translate(311.5px)
+    rotate(-83.0769230769deg);
+}
+.wheel > *:nth-of-type(8) {
+  transform: rotate(96.9230769231deg) translate(311.5px)
+    rotate(-96.9230769231deg);
+}
+.wheel > *:nth-of-type(9) {
+  transform: rotate(110.7692307692deg) translate(311.5px)
+    rotate(-110.7692307692deg);
+}
+.wheel > *:nth-of-type(10) {
+  transform: rotate(124.6153846154deg) translate(311.5px)
+    rotate(-124.6153846154deg);
+}
+.wheel > *:nth-of-type(11) {
+  transform: rotate(138.4615384615deg) translate(311.5px)
+    rotate(-138.4615384615deg);
+}
+.wheel > *:nth-of-type(12) {
+  transform: rotate(152.3076923077deg) translate(311.5px)
+    rotate(-152.3076923077deg);
+}
+.wheel > *:nth-of-type(13) {
+  transform: rotate(166.1538461538deg) translate(311.5px)
+    rotate(-166.1538461538deg);
+}
+.wheel > *:nth-of-type(14) {
+  transform: rotate(180deg) translate(311.5px) rotate(-180deg);
+}
+.wheel > *:nth-of-type(15) {
+  transform: rotate(193.8461538462deg) translate(311.5px)
+    rotate(-193.8461538462deg);
+}
+.wheel > *:nth-of-type(16) {
+  transform: rotate(207.6923076923deg) translate(311.5px)
+    rotate(-207.6923076923deg);
+}
+.wheel > *:nth-of-type(17) {
+  transform: rotate(221.5384615385deg) translate(311.5px)
+    rotate(-221.5384615385deg);
+}
+.wheel > *:nth-of-type(18) {
+  transform: rotate(235.3846153846deg) translate(311.5px)
+    rotate(-235.3846153846deg);
+}
+.wheel > *:nth-of-type(19) {
+  transform: rotate(249.2307692308deg) translate(311.5px)
+    rotate(-249.2307692308deg);
+}
+.wheel > *:nth-of-type(20) {
+  transform: rotate(263.0769230769deg) translate(311.5px)
+    rotate(-263.0769230769deg);
+}
+.wheel > *:nth-of-type(21) {
+  transform: rotate(276.9230769231deg) translate(311.5px)
+    rotate(-276.9230769231deg);
+}
+.wheel > *:nth-of-type(22) {
+  transform: rotate(290.7692307692deg) translate(311.5px)
+    rotate(-290.7692307692deg);
+}
+.wheel > *:nth-of-type(23) {
+  transform: rotate(304.6153846154deg) translate(311.5px)
+    rotate(-304.6153846154deg);
+}
+.wheel > *:nth-of-type(24) {
+  transform: rotate(318.4615384615deg) translate(311.5px)
+    rotate(-318.4615384615deg);
+}
+.wheel > *:nth-of-type(25) {
+  transform: rotate(332.3076923077deg) translate(311.5px)
+    rotate(-332.3076923077deg);
+}
+.wheel > *:nth-of-type(26) {
+  transform: rotate(346.1538461538deg) translate(311.5px)
+    rotate(-346.1538461538deg);
+} */
+.wheel::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+}
+
+.letter-text {
+  display: inline-block;
+}
+.is-active .letter-text {
+  transform: scale(2.8);
+}
+
+/* ------ general style ------ */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Montserrat";
+  color: #fff;
+  background-color: #104fa8;
+}
