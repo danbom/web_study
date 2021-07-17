@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circle Button</title>
+    <link rel="stylesheet" href="circle_button_style.css" />
+  </head>
+  <body>
+    <div class="entry">
+      <div class="letter_zone"></div>
+      <div class="btn_zone">
+        <div class="big_btn"></div>
+      </div>
+      <div class="small_btn_zone">
+        <div class="small_btn" id="btn1"></div>
+        <div class="small_btn" id="btn2"></div>
+        <div class="small_btn" id="btn3"></div>
+        <div class="small_btn" id="btn4"></div>
+        <div class="small_btn" id="btn5"></div>
+      </div>
+    </div>
+
+    <script>
+      let letter = document.querySelector(".letter_zone");
+      let btn1 = document.getElementById("btn1");
+      let btn2 = document.getElementById("btn2");
+      let btn3 = document.getElementById("btn3");
+      let btn4 = document.getElementById("btn4");
+      let btn5 = document.getElementById("btn5");
+      document.querySelector("#btn1").onclick = function () {
+        this.style.transform = "scale(1.3, 1.3)";
+        btn2.style.transform = "scale(1, 1)";
+        btn3.style.transform = "scale(1, 1)";
+        btn4.style.transform = "scale(1, 1)";
+        btn5.style.transform = "scale(1, 1)";
+        letter.style.background = "rgb(255, 73, 73)";
+      };
+      document.querySelector("#btn2").onclick = function () {
+        this.style.transform = "scale(1.3, 1.3)";
+        btn1.style.transform = "scale(1, 1)";
+        btn3.style.transform = "scale(1, 1)";
+        btn4.style.transform = "scale(1, 1)";
+        btn5.style.transform = "scale(1, 1)";
+        letter.style.background = "rgb(255, 196, 87)";
+      };
+      document.querySelector("#btn3").onclick = function () {
+        this.style.transform = "scale(1.3, 1.3)";
+        btn2.style.transform = "scale(1, 1)";
+        btn1.style.transform = "scale(1, 1)";
+        btn4.style.transform = "scale(1, 1)";
+        btn5.style.transform = "scale(1, 1)";
+        letter.style.background = "rgb(116, 218, 90)";
+      };
+      document.querySelector("#btn4").onclick = function () {
+        this.style.transform = "scale(1.3, 1.3)";
+        btn2.style.transform = "scale(1, 1)";
+        btn3.style.transform = "scale(1, 1)";
+        btn1.style.transform = "scale(1, 1)";
+        btn5.style.transform = "scale(1, 1)";
+        letter.style.background = "rgb(93, 144, 255)";
+      };
+      document.querySelector("#btn5").onclick = function () {
+        this.style.transform = "scale(1.3, 1.3)";
+        btn2.style.transform = "scale(1, 1)";
+        btn3.style.transform = "scale(1, 1)";
+        btn4.style.transform = "scale(1, 1)";
+        btn1.style.transform = "scale(1, 1)";
+        letter.style.background = "rgb(162, 104, 255)";
+      };
+    </script>
+  </body>
+</html>
