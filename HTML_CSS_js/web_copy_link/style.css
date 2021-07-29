@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  width: 12vw;
+  height: 12vw;
+  background-color: #888;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.foo {
+  background: transparent;
+  border: none;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}

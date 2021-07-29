@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Copy Link</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Target -->
+    <div class="btn" data-clipboard-target="#foo">
+      <input class="foo" id="foo" value="복사될 우체통 주소" />
+      <!-- Trigger -->
+      <!-- <button class="btn" data-clipboard-target="#foo">Copy</button> -->
+    </div>
+
+    <script src="./clipboard.min.js"></script>
+    <script>
+      var clipboard = new ClipboardJS(".btn");
+
+      clipboard.on("success", function (e) {
+        console.info("Action:", e.action);
+        console.info("Text:", e.text);
+        console.info("Trigger:", e.trigger);
+        alert("링크가 클립보드에 복사되었습니다!");
+
+        e.clearSelection();
+      });
+
+      clipboard.on("error", function (e) {
+        console.error("Action:", e.action);
+        console.error("Trigger:", e.trigger);
+      });
+    </script>
+  </body>
+</html>
