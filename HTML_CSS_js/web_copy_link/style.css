@@ -3,10 +3,20 @@
   padding: 0;
 }
 
+body {
+  position: absolute;
+  left: calc(50% - 6vw);
+  top: calc(50% - 6vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn {
   width: 12vw;
   height: 12vw;
-  background-color: #888;
+  background-color: #5265f2;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -20,4 +30,17 @@
   text-align: center;
   color: #fff;
   cursor: pointer;
+}
+
+.alert {
+  background: #8c99f7;
+  width: 12vw;
+  height: 2vw;
+  border-radius: 20px;
+  font-size: 0.65vw;
+  text-align: center;
+  line-height: 2vw;
+  margin-top: 15%;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
