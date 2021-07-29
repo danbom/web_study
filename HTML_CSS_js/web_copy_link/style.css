@@ -11,17 +11,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #f4f7ff;
 }
 
 .btn {
-  width: 12vw;
-  height: 12vw;
-  background-color: #5265f2;
+  width: 250px;
+  height: 250px;
+  background-color: #1f2335;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .foo {
@@ -30,16 +32,18 @@ body {
   text-align: center;
   color: #fff;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .alert {
-  background: #8c99f7;
-  width: 12vw;
-  height: 2vw;
+  background: #1f2335;
+  color: #fff;
+  width: 250px;
+  height: 50px;
   border-radius: 20px;
-  font-size: 0.65vw;
+  font-size: 14px;
   text-align: center;
-  line-height: 2vw;
+  line-height: 50px;
   margin-top: 15%;
   opacity: 0;
   transition: all 0.3s ease-in-out;
